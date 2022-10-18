@@ -52,6 +52,11 @@ namespace Proyecto_3
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 
