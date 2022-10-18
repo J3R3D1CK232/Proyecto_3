@@ -49,7 +49,7 @@
             this.cmbMesFechaNacimiento = new System.Windows.Forms.ComboBox();
             this.cmbAnoFechaNacimiento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.cmbAnoFechaCobertura = new System.Windows.Forms.ComboBox();
             this.cmbMesFechaCobertura = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.panelPrincipal.Controls.Add(this.cmbMesFechaCobertura);
             this.panelPrincipal.Controls.Add(this.label6);
             this.panelPrincipal.Controls.Add(this.cmbDiaFechaCobertura);
-            this.panelPrincipal.Controls.Add(this.textBox1);
+            this.panelPrincipal.Controls.Add(this.txtTelefono);
             this.panelPrincipal.Controls.Add(this.label5);
             this.panelPrincipal.Controls.Add(this.cmbAnoFechaNacimiento);
             this.panelPrincipal.Controls.Add(this.cmbMesFechaNacimiento);
@@ -253,6 +253,9 @@
             this.txtpNombre.Size = new System.Drawing.Size(176, 26);
             this.txtpNombre.TabIndex = 2;
             this.txtpNombre.Text = "Primer Nombre";
+            this.txtpNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpNombre.Enter += new System.EventHandler(this.txtpNombre_Enter);
+            this.txtpNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpNombre_KeyPress);
             // 
             // txtsNombre
             // 
@@ -264,6 +267,9 @@
             this.txtsNombre.Size = new System.Drawing.Size(176, 26);
             this.txtsNombre.TabIndex = 3;
             this.txtsNombre.Text = "Segundo Nombre";
+            this.txtsNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsNombre.Enter += new System.EventHandler(this.txtsNombre_Enter);
+            this.txtsNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsNombre_KeyPress);
             // 
             // txtpApellido
             // 
@@ -275,6 +281,9 @@
             this.txtpApellido.Size = new System.Drawing.Size(176, 26);
             this.txtpApellido.TabIndex = 4;
             this.txtpApellido.Text = "Primer Apellido";
+            this.txtpApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpApellido.Enter += new System.EventHandler(this.txtpApellido_Enter);
+            this.txtpApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpApellido_KeyPress);
             // 
             // txtsApellido
             // 
@@ -286,6 +295,9 @@
             this.txtsApellido.Size = new System.Drawing.Size(176, 26);
             this.txtsApellido.TabIndex = 5;
             this.txtsApellido.Text = "Segundo Apellido";
+            this.txtsApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsApellido.Enter += new System.EventHandler(this.txtsApellido_Enter);
+            this.txtsApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsApellido_KeyPress);
             // 
             // label3
             // 
@@ -495,15 +507,18 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Teléfono";
             // 
-            // textBox1
+            // txtTelefono
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(85, 381);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 26);
-            this.textBox1.TabIndex = 12;
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(85, 381);
+            this.txtTelefono.MaxLength = 11;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(176, 26);
+            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // cmbAnoFechaCobertura
             // 
@@ -701,6 +716,7 @@
             this.txtMontoCobertura.Name = "txtMontoCobertura";
             this.txtMontoCobertura.Size = new System.Drawing.Size(176, 26);
             this.txtMontoCobertura.TabIndex = 18;
+            this.txtMontoCobertura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoCobertura_KeyPress);
             // 
             // label7
             // 
@@ -719,7 +735,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(54)))), ((int)(((byte)(46)))));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(13)))));
             this.button1.Location = new System.Drawing.Point(889, 567);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 36);
@@ -780,7 +796,7 @@
         private System.Windows.Forms.ComboBox cmbMesFechaNacimiento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbDiaFechaNacimiento;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbAnoFechaCobertura;
         private System.Windows.Forms.ComboBox cmbMesFechaCobertura;
