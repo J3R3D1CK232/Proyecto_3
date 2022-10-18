@@ -30,34 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroAfiliado));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.txtMontoCobertura = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbAnoFechaCobertura = new System.Windows.Forms.ComboBox();
+            this.cmbMesFechaCobertura = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbDiaFechaCobertura = new System.Windows.Forms.ComboBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbAnoFechaNacimiento = new System.Windows.Forms.ComboBox();
+            this.cmbMesFechaNacimiento = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbDiaFechaNacimiento = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtsApellido = new System.Windows.Forms.TextBox();
+            this.txtpApellido = new System.Windows.Forms.TextBox();
+            this.txtsNombre = new System.Windows.Forms.TextBox();
+            this.txtpNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.barraSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.listaProveedor = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnInsertarProveedor = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtpNombre = new System.Windows.Forms.TextBox();
-            this.txtsNombre = new System.Windows.Forms.TextBox();
-            this.txtpApellido = new System.Windows.Forms.TextBox();
-            this.txtsApellido = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbDiaFechaNacimiento = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbMesFechaNacimiento = new System.Windows.Forms.ComboBox();
-            this.cmbAnoFechaNacimiento = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.cmbAnoFechaCobertura = new System.Windows.Forms.ComboBox();
-            this.cmbMesFechaCobertura = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbDiaFechaCobertura = new System.Windows.Forms.ComboBox();
-            this.txtMontoCobertura = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
             this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelPrincipal.Controls.Add(this.label8);
-            this.panelPrincipal.Controls.Add(this.button1);
+            this.panelPrincipal.Controls.Add(this.btnRegistrar);
             this.panelPrincipal.Controls.Add(this.txtMontoCobertura);
             this.panelPrincipal.Controls.Add(this.label7);
             this.panelPrincipal.Controls.Add(this.cmbAnoFechaCobertura);
@@ -93,6 +93,526 @@
             this.panelPrincipal.Size = new System.Drawing.Size(1024, 640);
             this.panelPrincipal.TabIndex = 0;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(453, 512);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Q";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(213)))), ((int)(((byte)(11)))));
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(13)))));
+            this.btnRegistrar.Location = new System.Drawing.Point(889, 567);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(101, 36);
+            this.btnRegistrar.TabIndex = 8;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txtMontoCobertura
+            // 
+            this.txtMontoCobertura.BackColor = System.Drawing.Color.White;
+            this.txtMontoCobertura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMontoCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMontoCobertura.Location = new System.Drawing.Point(481, 510);
+            this.txtMontoCobertura.Name = "txtMontoCobertura";
+            this.txtMontoCobertura.Size = new System.Drawing.Size(176, 26);
+            this.txtMontoCobertura.TabIndex = 18;
+            this.txtMontoCobertura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoCobertura_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(442, 466);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Monto de Cobertura";
+            // 
+            // cmbAnoFechaCobertura
+            // 
+            this.cmbAnoFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnoFechaCobertura.FormattingEnabled = true;
+            this.cmbAnoFechaCobertura.Items.AddRange(new object[] {
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950",
+            "1949",
+            "1948",
+            "1947",
+            "1946",
+            "1945",
+            "1944",
+            "1943",
+            "1942",
+            "1941",
+            "1940",
+            "1939",
+            "1938",
+            "1937",
+            "1936",
+            "1935",
+            "1934",
+            "1933",
+            "1932",
+            "1931",
+            "1930",
+            "1929",
+            "1928",
+            "1927",
+            "1926",
+            "1925",
+            "1924",
+            "1923",
+            "1922"});
+            this.cmbAnoFechaCobertura.Location = new System.Drawing.Point(285, 510);
+            this.cmbAnoFechaCobertura.Name = "cmbAnoFechaCobertura";
+            this.cmbAnoFechaCobertura.Size = new System.Drawing.Size(70, 28);
+            this.cmbAnoFechaCobertura.TabIndex = 16;
+            this.cmbAnoFechaCobertura.Text = "Año";
+            // 
+            // cmbMesFechaCobertura
+            // 
+            this.cmbMesFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMesFechaCobertura.FormattingEnabled = true;
+            this.cmbMesFechaCobertura.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMesFechaCobertura.Location = new System.Drawing.Point(166, 510);
+            this.cmbMesFechaCobertura.Name = "cmbMesFechaCobertura";
+            this.cmbMesFechaCobertura.Size = new System.Drawing.Size(113, 28);
+            this.cmbMesFechaCobertura.TabIndex = 15;
+            this.cmbMesFechaCobertura.Text = "Mes";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(48, 466);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(217, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Fecha Inicio de Cobertura";
+            // 
+            // cmbDiaFechaCobertura
+            // 
+            this.cmbDiaFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDiaFechaCobertura.FormattingEnabled = true;
+            this.cmbDiaFechaCobertura.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbDiaFechaCobertura.Location = new System.Drawing.Point(90, 510);
+            this.cmbDiaFechaCobertura.Name = "cmbDiaFechaCobertura";
+            this.cmbDiaFechaCobertura.Size = new System.Drawing.Size(70, 28);
+            this.cmbDiaFechaCobertura.TabIndex = 13;
+            this.cmbDiaFechaCobertura.Text = "Dia";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(85, 381);
+            this.txtTelefono.MaxLength = 11;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(176, 26);
+            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(46, 347);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Teléfono";
+            // 
+            // cmbAnoFechaNacimiento
+            // 
+            this.cmbAnoFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnoFechaNacimiento.FormattingEnabled = true;
+            this.cmbAnoFechaNacimiento.Items.AddRange(new object[] {
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950",
+            "1949",
+            "1948",
+            "1947",
+            "1946",
+            "1945",
+            "1944",
+            "1943",
+            "1942",
+            "1941",
+            "1940",
+            "1939",
+            "1938",
+            "1937",
+            "1936",
+            "1935",
+            "1934",
+            "1933",
+            "1932",
+            "1931",
+            "1930",
+            "1929",
+            "1928",
+            "1927",
+            "1926",
+            "1925",
+            "1924",
+            "1923",
+            "1922"});
+            this.cmbAnoFechaNacimiento.Location = new System.Drawing.Point(285, 274);
+            this.cmbAnoFechaNacimiento.Name = "cmbAnoFechaNacimiento";
+            this.cmbAnoFechaNacimiento.Size = new System.Drawing.Size(70, 28);
+            this.cmbAnoFechaNacimiento.TabIndex = 10;
+            this.cmbAnoFechaNacimiento.Text = "Año";
+            // 
+            // cmbMesFechaNacimiento
+            // 
+            this.cmbMesFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMesFechaNacimiento.FormattingEnabled = true;
+            this.cmbMesFechaNacimiento.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMesFechaNacimiento.Location = new System.Drawing.Point(164, 274);
+            this.cmbMesFechaNacimiento.Name = "cmbMesFechaNacimiento";
+            this.cmbMesFechaNacimiento.Size = new System.Drawing.Size(115, 28);
+            this.cmbMesFechaNacimiento.TabIndex = 9;
+            this.cmbMesFechaNacimiento.Text = "Mes";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(46, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Fecha de Nacimiento";
+            // 
+            // cmbDiaFechaNacimiento
+            // 
+            this.cmbDiaFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDiaFechaNacimiento.FormattingEnabled = true;
+            this.cmbDiaFechaNacimiento.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbDiaFechaNacimiento.Location = new System.Drawing.Point(88, 274);
+            this.cmbDiaFechaNacimiento.Name = "cmbDiaFechaNacimiento";
+            this.cmbDiaFechaNacimiento.Size = new System.Drawing.Size(70, 28);
+            this.cmbDiaFechaNacimiento.TabIndex = 7;
+            this.cmbDiaFechaNacimiento.Text = "Dia";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 175);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(234, 25);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Informacion Personal";
+            // 
+            // txtsApellido
+            // 
+            this.txtsApellido.BackColor = System.Drawing.Color.White;
+            this.txtsApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtsApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsApellido.Location = new System.Drawing.Point(627, 109);
+            this.txtsApellido.Name = "txtsApellido";
+            this.txtsApellido.Size = new System.Drawing.Size(176, 26);
+            this.txtsApellido.TabIndex = 5;
+            this.txtsApellido.Text = "Segundo Apellido";
+            this.txtsApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsApellido.Enter += new System.EventHandler(this.txtsApellido_Enter);
+            this.txtsApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsApellido_KeyPress);
+            // 
+            // txtpApellido
+            // 
+            this.txtpApellido.BackColor = System.Drawing.Color.White;
+            this.txtpApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpApellido.Location = new System.Drawing.Point(435, 109);
+            this.txtpApellido.Name = "txtpApellido";
+            this.txtpApellido.Size = new System.Drawing.Size(176, 26);
+            this.txtpApellido.TabIndex = 4;
+            this.txtpApellido.Text = "Primer Apellido";
+            this.txtpApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpApellido.Enter += new System.EventHandler(this.txtpApellido_Enter);
+            this.txtpApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpApellido_KeyPress);
+            // 
+            // txtsNombre
+            // 
+            this.txtsNombre.BackColor = System.Drawing.Color.White;
+            this.txtsNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtsNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsNombre.Location = new System.Drawing.Point(242, 109);
+            this.txtsNombre.Name = "txtsNombre";
+            this.txtsNombre.Size = new System.Drawing.Size(176, 26);
+            this.txtsNombre.TabIndex = 3;
+            this.txtsNombre.Text = "Segundo Nombre";
+            this.txtsNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsNombre.Enter += new System.EventHandler(this.txtsNombre_Enter);
+            this.txtsNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsNombre_KeyPress);
+            // 
+            // txtpNombre
+            // 
+            this.txtpNombre.BackColor = System.Drawing.Color.White;
+            this.txtpNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpNombre.Location = new System.Drawing.Point(50, 109);
+            this.txtpNombre.Name = "txtpNombre";
+            this.txtpNombre.Size = new System.Drawing.Size(176, 26);
+            this.txtpNombre.TabIndex = 2;
+            this.txtpNombre.Text = "Primer Nombre";
+            this.txtpNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpNombre.Enter += new System.EventHandler(this.txtpNombre_Enter);
+            this.txtpNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpNombre_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(199, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre Completo";
+            // 
             // barraSuperior
             // 
             this.barraSuperior.AutoSize = true;
@@ -112,6 +632,17 @@
             this.barraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseDown);
             this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             this.barraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(376, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Registro de Afiliado";
             // 
             // listaProveedor
             // 
@@ -220,539 +751,6 @@
             this.btnInsertarAfiliado.Size = new System.Drawing.Size(32, 32);
             this.btnInsertarAfiliado.TabIndex = 3;
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
-            this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(376, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 25);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Registro de Afiliado";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre Completo";
-            // 
-            // txtpNombre
-            // 
-            this.txtpNombre.BackColor = System.Drawing.Color.White;
-            this.txtpNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpNombre.Location = new System.Drawing.Point(50, 109);
-            this.txtpNombre.Name = "txtpNombre";
-            this.txtpNombre.Size = new System.Drawing.Size(176, 26);
-            this.txtpNombre.TabIndex = 2;
-            this.txtpNombre.Text = "Primer Nombre";
-            this.txtpNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpNombre.Enter += new System.EventHandler(this.txtpNombre_Enter);
-            this.txtpNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpNombre_KeyPress);
-            // 
-            // txtsNombre
-            // 
-            this.txtsNombre.BackColor = System.Drawing.Color.White;
-            this.txtsNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtsNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsNombre.Location = new System.Drawing.Point(242, 109);
-            this.txtsNombre.Name = "txtsNombre";
-            this.txtsNombre.Size = new System.Drawing.Size(176, 26);
-            this.txtsNombre.TabIndex = 3;
-            this.txtsNombre.Text = "Segundo Nombre";
-            this.txtsNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtsNombre.Enter += new System.EventHandler(this.txtsNombre_Enter);
-            this.txtsNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsNombre_KeyPress);
-            // 
-            // txtpApellido
-            // 
-            this.txtpApellido.BackColor = System.Drawing.Color.White;
-            this.txtpApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpApellido.Location = new System.Drawing.Point(435, 109);
-            this.txtpApellido.Name = "txtpApellido";
-            this.txtpApellido.Size = new System.Drawing.Size(176, 26);
-            this.txtpApellido.TabIndex = 4;
-            this.txtpApellido.Text = "Primer Apellido";
-            this.txtpApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpApellido.Enter += new System.EventHandler(this.txtpApellido_Enter);
-            this.txtpApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpApellido_KeyPress);
-            // 
-            // txtsApellido
-            // 
-            this.txtsApellido.BackColor = System.Drawing.Color.White;
-            this.txtsApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtsApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsApellido.Location = new System.Drawing.Point(627, 109);
-            this.txtsApellido.Name = "txtsApellido";
-            this.txtsApellido.Size = new System.Drawing.Size(176, 26);
-            this.txtsApellido.TabIndex = 5;
-            this.txtsApellido.Text = "Segundo Apellido";
-            this.txtsApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtsApellido.Enter += new System.EventHandler(this.txtsApellido_Enter);
-            this.txtsApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsApellido_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Informacion Personal";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
-            // 
-            // cmbDiaFechaNacimiento
-            // 
-            this.cmbDiaFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDiaFechaNacimiento.FormattingEnabled = true;
-            this.cmbDiaFechaNacimiento.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmbDiaFechaNacimiento.Location = new System.Drawing.Point(88, 274);
-            this.cmbDiaFechaNacimiento.Name = "cmbDiaFechaNacimiento";
-            this.cmbDiaFechaNacimiento.Size = new System.Drawing.Size(70, 28);
-            this.cmbDiaFechaNacimiento.TabIndex = 7;
-            this.cmbDiaFechaNacimiento.Text = "Dia";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Fecha de Nacimiento";
-            // 
-            // cmbMesFechaNacimiento
-            // 
-            this.cmbMesFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMesFechaNacimiento.FormattingEnabled = true;
-            this.cmbMesFechaNacimiento.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbMesFechaNacimiento.Location = new System.Drawing.Point(164, 274);
-            this.cmbMesFechaNacimiento.Name = "cmbMesFechaNacimiento";
-            this.cmbMesFechaNacimiento.Size = new System.Drawing.Size(97, 28);
-            this.cmbMesFechaNacimiento.TabIndex = 9;
-            this.cmbMesFechaNacimiento.Text = "Mes";
-            // 
-            // cmbAnoFechaNacimiento
-            // 
-            this.cmbAnoFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnoFechaNacimiento.FormattingEnabled = true;
-            this.cmbAnoFechaNacimiento.Items.AddRange(new object[] {
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950",
-            "1949",
-            "1948",
-            "1947",
-            "1946",
-            "1945",
-            "1944",
-            "1943",
-            "1942",
-            "1941",
-            "1940",
-            "1939",
-            "1938",
-            "1937",
-            "1936",
-            "1935",
-            "1934",
-            "1933",
-            "1932",
-            "1931",
-            "1930",
-            "1929",
-            "1928",
-            "1927",
-            "1926",
-            "1925",
-            "1924",
-            "1923",
-            "1922"});
-            this.cmbAnoFechaNacimiento.Location = new System.Drawing.Point(267, 274);
-            this.cmbAnoFechaNacimiento.Name = "cmbAnoFechaNacimiento";
-            this.cmbAnoFechaNacimiento.Size = new System.Drawing.Size(70, 28);
-            this.cmbAnoFechaNacimiento.TabIndex = 10;
-            this.cmbAnoFechaNacimiento.Text = "Año";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 347);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Teléfono";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.White;
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(85, 381);
-            this.txtTelefono.MaxLength = 11;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(176, 26);
-            this.txtTelefono.TabIndex = 12;
-            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // cmbAnoFechaCobertura
-            // 
-            this.cmbAnoFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnoFechaCobertura.FormattingEnabled = true;
-            this.cmbAnoFechaCobertura.Items.AddRange(new object[] {
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950",
-            "1949",
-            "1948",
-            "1947",
-            "1946",
-            "1945",
-            "1944",
-            "1943",
-            "1942",
-            "1941",
-            "1940",
-            "1939",
-            "1938",
-            "1937",
-            "1936",
-            "1935",
-            "1934",
-            "1933",
-            "1932",
-            "1931",
-            "1930",
-            "1929",
-            "1928",
-            "1927",
-            "1926",
-            "1925",
-            "1924",
-            "1923",
-            "1922"});
-            this.cmbAnoFechaCobertura.Location = new System.Drawing.Point(269, 510);
-            this.cmbAnoFechaCobertura.Name = "cmbAnoFechaCobertura";
-            this.cmbAnoFechaCobertura.Size = new System.Drawing.Size(70, 28);
-            this.cmbAnoFechaCobertura.TabIndex = 16;
-            this.cmbAnoFechaCobertura.Text = "Año";
-            // 
-            // cmbMesFechaCobertura
-            // 
-            this.cmbMesFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMesFechaCobertura.FormattingEnabled = true;
-            this.cmbMesFechaCobertura.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbMesFechaCobertura.Location = new System.Drawing.Point(166, 510);
-            this.cmbMesFechaCobertura.Name = "cmbMesFechaCobertura";
-            this.cmbMesFechaCobertura.Size = new System.Drawing.Size(97, 28);
-            this.cmbMesFechaCobertura.TabIndex = 15;
-            this.cmbMesFechaCobertura.Text = "Mes";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(48, 466);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Fecha Inicio de Cobertura";
-            // 
-            // cmbDiaFechaCobertura
-            // 
-            this.cmbDiaFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDiaFechaCobertura.FormattingEnabled = true;
-            this.cmbDiaFechaCobertura.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmbDiaFechaCobertura.Location = new System.Drawing.Point(90, 510);
-            this.cmbDiaFechaCobertura.Name = "cmbDiaFechaCobertura";
-            this.cmbDiaFechaCobertura.Size = new System.Drawing.Size(70, 28);
-            this.cmbDiaFechaCobertura.TabIndex = 13;
-            this.cmbDiaFechaCobertura.Text = "Dia";
-            // 
-            // txtMontoCobertura
-            // 
-            this.txtMontoCobertura.BackColor = System.Drawing.Color.White;
-            this.txtMontoCobertura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMontoCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoCobertura.Location = new System.Drawing.Point(481, 510);
-            this.txtMontoCobertura.Name = "txtMontoCobertura";
-            this.txtMontoCobertura.Size = new System.Drawing.Size(176, 26);
-            this.txtMontoCobertura.TabIndex = 18;
-            this.txtMontoCobertura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoCobertura_KeyPress);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(442, 466);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Monto de Cobertura";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(213)))), ((int)(((byte)(11)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(13)))));
-            this.button1.Location = new System.Drawing.Point(889, 567);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 36);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(453, 512);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Q";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // frmRegistroAfiliado
             // 
@@ -804,7 +802,7 @@
         private System.Windows.Forms.ComboBox cmbDiaFechaCobertura;
         private System.Windows.Forms.TextBox txtMontoCobertura;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label8;
     }
 }

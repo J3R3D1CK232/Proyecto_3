@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Proyecto_3
 {
@@ -52,16 +54,6 @@ namespace Proyecto_3
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInsertarAfiliado_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnListaAfiliado_Click(object sender, EventArgs e)
         {
             frmListaAfiliado frm = new frmListaAfiliado();
@@ -81,21 +73,6 @@ namespace Proyecto_3
             frmListaProveedor frm = new frmListaProveedor();
             frm.Show();
             this.Close();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtpNombre_Enter(object sender, EventArgs e)
@@ -180,6 +157,20 @@ namespace Proyecto_3
             {
                 MessageBox.Show("Solo se permite ingresar letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
+                return;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if ((cmbDiaFechaNacimiento.SelectedIndex == -1) || (cmbMesFechaNacimiento.SelectedIndex == -1) || (cmbAnoFechaNacimiento.SelectedIndex == -1))
+            {
+                MessageBox.Show("Debe completar la fecha de nacimiento", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if((cmbDiaFechaCobertura.SelectedIndex == -1) || (cmbMesFechaCobertura.SelectedIndex == -1) || (cmbAnoFechaCobertura.SelectedIndex == -1))
+            {
+                MessageBox.Show("Debe completar la fecha de cobertura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }
