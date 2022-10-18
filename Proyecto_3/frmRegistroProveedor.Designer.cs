@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroProveedor));
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.barraSuperior = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnInsertarAfiliado = new System.Windows.Forms.Button();
-            this.btnListaAfiliado = new System.Windows.Forms.Button();
-            this.btnInsertarProveedor = new System.Windows.Forms.Button();
-            this.listaProveedor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.barraSuperior = new System.Windows.Forms.Panel();
+            this.listaProveedor = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnInsertarProveedor = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnListaAfiliado = new System.Windows.Forms.Button();
+            this.btnInsertarAfiliado = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,17 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1024, 640);
             this.panelPrincipal.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(894, 55);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenido al sistema de Seguro Médico";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // barraSuperior
             // 
@@ -74,6 +85,25 @@
             this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             this.barraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseUp);
             // 
+            // listaProveedor
+            // 
+            this.listaProveedor.BackColor = System.Drawing.Color.White;
+            this.listaProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.listaProveedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.listaProveedor.FlatAppearance.BorderSize = 0;
+            this.listaProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.listaProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.listaProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.listaProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listaProveedor.ForeColor = System.Drawing.Color.Black;
+            this.listaProveedor.Image = ((System.Drawing.Image)(resources.GetObject("listaProveedor.Image")));
+            this.listaProveedor.Location = new System.Drawing.Point(126, 5);
+            this.listaProveedor.Name = "listaProveedor";
+            this.listaProveedor.Size = new System.Drawing.Size(32, 32);
+            this.listaProveedor.TabIndex = 6;
+            this.listaProveedor.UseVisualStyleBackColor = false;
+            this.listaProveedor.Click += new System.EventHandler(this.listaProveedor_Click);
+            // 
             // btnMinimizar
             // 
             this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
@@ -91,6 +121,25 @@
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
+            // btnInsertarProveedor
+            // 
+            this.btnInsertarProveedor.BackColor = System.Drawing.Color.White;
+            this.btnInsertarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnInsertarProveedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.btnInsertarProveedor.FlatAppearance.BorderSize = 3;
+            this.btnInsertarProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnInsertarProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnInsertarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertarProveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnInsertarProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertarProveedor.Image")));
+            this.btnInsertarProveedor.Location = new System.Drawing.Point(88, 5);
+            this.btnInsertarProveedor.Name = "btnInsertarProveedor";
+            this.btnInsertarProveedor.Size = new System.Drawing.Size(32, 32);
+            this.btnInsertarProveedor.TabIndex = 5;
+            this.btnInsertarProveedor.UseVisualStyleBackColor = false;
+            this.btnInsertarProveedor.Click += new System.EventHandler(this.btnInsertarProveedor_Click);
+            // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
@@ -106,25 +155,6 @@
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnInsertarAfiliado
-            // 
-            this.btnInsertarAfiliado.BackColor = System.Drawing.Color.White;
-            this.btnInsertarAfiliado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnInsertarAfiliado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.btnInsertarAfiliado.FlatAppearance.BorderSize = 0;
-            this.btnInsertarAfiliado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnInsertarAfiliado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnInsertarAfiliado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertarAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertarAfiliado.ForeColor = System.Drawing.Color.Black;
-            this.btnInsertarAfiliado.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertarAfiliado.Image")));
-            this.btnInsertarAfiliado.Location = new System.Drawing.Point(12, 4);
-            this.btnInsertarAfiliado.Name = "btnInsertarAfiliado";
-            this.btnInsertarAfiliado.Size = new System.Drawing.Size(32, 32);
-            this.btnInsertarAfiliado.TabIndex = 3;
-            this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
-            this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
             // 
             // btnListaAfiliado
             // 
@@ -145,56 +175,26 @@
             this.btnListaAfiliado.UseVisualStyleBackColor = false;
             this.btnListaAfiliado.Click += new System.EventHandler(this.btnListaAfiliado_Click);
             // 
-            // btnInsertarProveedor
+            // btnInsertarAfiliado
             // 
-            this.btnInsertarProveedor.BackColor = System.Drawing.Color.White;
-            this.btnInsertarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnInsertarProveedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.btnInsertarProveedor.FlatAppearance.BorderSize = 0;
-            this.btnInsertarProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnInsertarProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnInsertarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertarProveedor.ForeColor = System.Drawing.Color.Black;
-            this.btnInsertarProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertarProveedor.Image")));
-            this.btnInsertarProveedor.Location = new System.Drawing.Point(88, 5);
-            this.btnInsertarProveedor.Name = "btnInsertarProveedor";
-            this.btnInsertarProveedor.Size = new System.Drawing.Size(32, 32);
-            this.btnInsertarProveedor.TabIndex = 5;
-            this.btnInsertarProveedor.UseVisualStyleBackColor = false;
-            this.btnInsertarProveedor.Click += new System.EventHandler(this.btnInsertarProveedor_Click);
+            this.btnInsertarAfiliado.BackColor = System.Drawing.Color.White;
+            this.btnInsertarAfiliado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnInsertarAfiliado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.btnInsertarAfiliado.FlatAppearance.BorderSize = 0;
+            this.btnInsertarAfiliado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnInsertarAfiliado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnInsertarAfiliado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertarAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertarAfiliado.ForeColor = System.Drawing.Color.Black;
+            this.btnInsertarAfiliado.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertarAfiliado.Image")));
+            this.btnInsertarAfiliado.Location = new System.Drawing.Point(12, 4);
+            this.btnInsertarAfiliado.Name = "btnInsertarAfiliado";
+            this.btnInsertarAfiliado.Size = new System.Drawing.Size(32, 32);
+            this.btnInsertarAfiliado.TabIndex = 3;
+            this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
+            this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
             // 
-            // listaProveedor
-            // 
-            this.listaProveedor.BackColor = System.Drawing.Color.White;
-            this.listaProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.listaProveedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.listaProveedor.FlatAppearance.BorderSize = 0;
-            this.listaProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.listaProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.listaProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.listaProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listaProveedor.ForeColor = System.Drawing.Color.Black;
-            this.listaProveedor.Image = ((System.Drawing.Image)(resources.GetObject("listaProveedor.Image")));
-            this.listaProveedor.Location = new System.Drawing.Point(126, 5);
-            this.listaProveedor.Name = "listaProveedor";
-            this.listaProveedor.Size = new System.Drawing.Size(32, 32);
-            this.listaProveedor.TabIndex = 6;
-            this.listaProveedor.UseVisualStyleBackColor = false;
-            this.listaProveedor.Click += new System.EventHandler(this.listaProveedor_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(894, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido al sistema de Seguro Médico";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // principal
+            // frmRegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,8 +204,9 @@
             this.Controls.Add(this.panelPrincipal);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "principal";
-            this.Text = "Menu Principal";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmRegistroProveedor";
+            this.Text = "Registro Proveedor";
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.barraSuperior.ResumeLayout(false);
