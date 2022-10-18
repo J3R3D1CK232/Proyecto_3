@@ -50,6 +50,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmRegistroAfiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroAfiliado.Designer.cs">
+      <DependentUpon>frmRegistroAfiliado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaAfiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaAfiliado.Designer.cs">
+      <DependentUpon>frmListaAfiliado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroProveedor.Designer.cs">
+      <DependentUpon>frmRegistroProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaProveedor.Designer.cs">
+      <DependentUpon>frmListaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +82,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmRegistroAfiliado.resx">
+      <DependentUpon>frmRegistroAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaAfiliado.resx">
+      <DependentUpon>frmListaAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroProveedor.resx">
+      <DependentUpon>frmRegistroProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaProveedor.resx">
+      <DependentUpon>frmListaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.cs</DependentUpon>
     </EmbeddedResource>

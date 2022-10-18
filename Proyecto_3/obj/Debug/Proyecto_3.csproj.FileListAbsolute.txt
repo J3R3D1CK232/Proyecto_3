@@ -11,3 +11,7 @@ C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyect
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.exe
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.pdb
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.principal.resources
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmRegistroAfiliado.resources
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmListaAfiliado.resources
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmRegistroProveedor.resources
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmListaProveedor.resources

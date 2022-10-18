@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_3
 {
-    public partial class principal : Form
+    public partial class frmRegistroAfiliado : Form
     {
-        public principal()
+        public frmRegistroAfiliado()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;      
@@ -59,30 +59,28 @@ namespace Proyecto_3
 
         private void btnInsertarAfiliado_Click(object sender, EventArgs e)
         {
-            frmRegistroAfiliado frm = new frmRegistroAfiliado();
-            frm.Show();
-            this.Hide();
+            
         }
 
         private void btnListaAfiliado_Click(object sender, EventArgs e)
         {
             frmListaAfiliado frm = new frmListaAfiliado();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnInsertarProveedor_Click(object sender, EventArgs e)
         {
             frmRegistroProveedor frm = new frmRegistroProveedor();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void listaProveedor_Click(object sender, EventArgs e)
         {
             frmListaProveedor frm = new frmListaProveedor();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
