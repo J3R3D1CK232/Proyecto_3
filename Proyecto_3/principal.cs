@@ -17,7 +17,8 @@ namespace Proyecto_3
         public principal()
         {
             InitializeComponent();
-            
+            StartPosition = FormStartPosition.CenterScreen;      
+
         }
         int m, mx, my;
         private void barraSuperior_MouseDown(object sender, MouseEventArgs e)
