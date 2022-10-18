@@ -17,7 +17,7 @@ namespace Proyecto_3
         public frmRegistroAfiliado()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;      
+            StartPosition = FormStartPosition.CenterScreen;              
 
         }
         int m, mx, my;
@@ -81,6 +81,21 @@ namespace Proyecto_3
             frmListaProveedor frm = new frmListaProveedor();
             frm.Show();
             this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
