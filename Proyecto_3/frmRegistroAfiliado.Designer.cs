@@ -58,6 +58,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -618,6 +619,7 @@
             this.barraSuperior.AutoSize = true;
             this.barraSuperior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.barraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(65)))), ((int)(((byte)(95)))));
+            this.barraSuperior.Controls.Add(this.panel1);
             this.barraSuperior.Controls.Add(this.label1);
             this.barraSuperior.Controls.Add(this.listaProveedor);
             this.barraSuperior.Controls.Add(this.btnMinimizar);
@@ -752,6 +754,15 @@
             this.btnInsertarAfiliado.TabIndex = 3;
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(336, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(34, 32);
+            this.panel1.TabIndex = 20;
+            // 
             // frmRegistroAfiliado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,6 +815,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
