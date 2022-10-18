@@ -1,0 +1,13 @@
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.exe.config
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.exe
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.pdb
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\MaterialSkin.dll
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.AssemblyReference.cache
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.SuggestedBindingRedirects.cache
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.Properties.Resources.resources
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.GenerateResource.cache
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.CoreCompileInputs.cache
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.CopyComplete
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.exe
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.pdb
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.principal.resources
