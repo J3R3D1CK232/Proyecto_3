@@ -177,11 +177,12 @@ namespace Proyecto_3
                 return;
             }
 
-            String fechaNacimiento = cmbMesNacimiento.SelectedItem.ToString() + "/" + cmbDiaNacimiento.SelectedItem.ToString() + "/" + cmbAnoNacimiento.SelectedItem.ToString();
-            String fechaCobertura = cmbMesCobertura.SelectedItem.ToString() + "/" + cmbDiaCobertura.SelectedItem.ToString() + "/" + cmbAnoCobertura.SelectedItem.ToString();
+            string fechaNacimiento = cmbMesNacimiento.SelectedItem.ToString() + "/" + cmbDiaNacimiento.SelectedItem.ToString() + "/" + cmbAnoNacimiento.SelectedItem.ToString();
+            string fechaCobertura = cmbMesCobertura.SelectedItem.ToString() + "/" + cmbDiaCobertura.SelectedItem.ToString() + "/" + cmbAnoCobertura.SelectedItem.ToString();
             /*String fecha_Nacimiento = DateTime.Parse(fechaNacimiento).ToShortDateString();
             String fecha_Cobertura = DateTime.Parse(fechaCobertura).ToShortDateString();*/
             MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fechaNacimiento,Convert.ToInt64(txtTelefono.Text),fechaCobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
+
         }
 
         private void frmRegistroAfiliado_Load(object sender, EventArgs e)

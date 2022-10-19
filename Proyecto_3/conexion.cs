@@ -25,7 +25,7 @@ class conexion
         }
     }
 
-    public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, String fechaNacimiento, Int64 telefono, String fechaCobertura, decimal monto ,string estado)
+    public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, string fechaNacimiento, Int64 telefono, string fechaCobertura, decimal monto ,string estado)
     {
         string salida = "Registro Exitoso";
         try
