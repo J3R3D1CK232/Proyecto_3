@@ -34,16 +34,10 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtMontoCobertura = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbAnoFechaCobertura = new System.Windows.Forms.ComboBox();
-            this.cmbMesFechaCobertura = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbDiaFechaCobertura = new System.Windows.Forms.ComboBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbAnoFechaNacimiento = new System.Windows.Forms.ComboBox();
-            this.cmbMesFechaNacimiento = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbDiaFechaNacimiento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtsApellido = new System.Windows.Forms.TextBox();
             this.txtpApellido = new System.Windows.Forms.TextBox();
@@ -51,6 +45,7 @@
             this.txtpNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.barraSuperior = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.listaProveedor = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
@@ -58,7 +53,14 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaCobertura = new System.Windows.Forms.DateTimePicker();
+            this.cmbDiaNacimiento = new System.Windows.Forms.ComboBox();
+            this.cmbAnoNacimiento = new System.Windows.Forms.ComboBox();
+            this.cmbMesNacimiento = new System.Windows.Forms.ComboBox();
+            this.cmbMesCobertura = new System.Windows.Forms.ComboBox();
+            this.cmbAnoCobertura = new System.Windows.Forms.ComboBox();
+            this.cmbDiaCobertura = new System.Windows.Forms.ComboBox();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -67,20 +69,22 @@
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
             this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelPrincipal.Controls.Add(this.cmbMesCobertura);
+            this.panelPrincipal.Controls.Add(this.cmbAnoCobertura);
+            this.panelPrincipal.Controls.Add(this.cmbDiaCobertura);
+            this.panelPrincipal.Controls.Add(this.cmbMesNacimiento);
+            this.panelPrincipal.Controls.Add(this.cmbAnoNacimiento);
+            this.panelPrincipal.Controls.Add(this.cmbDiaNacimiento);
+            this.panelPrincipal.Controls.Add(this.dtpFechaCobertura);
+            this.panelPrincipal.Controls.Add(this.dtpFechaNacimiento);
             this.panelPrincipal.Controls.Add(this.label8);
             this.panelPrincipal.Controls.Add(this.btnRegistrar);
             this.panelPrincipal.Controls.Add(this.txtMontoCobertura);
             this.panelPrincipal.Controls.Add(this.label7);
-            this.panelPrincipal.Controls.Add(this.cmbAnoFechaCobertura);
-            this.panelPrincipal.Controls.Add(this.cmbMesFechaCobertura);
             this.panelPrincipal.Controls.Add(this.label6);
-            this.panelPrincipal.Controls.Add(this.cmbDiaFechaCobertura);
             this.panelPrincipal.Controls.Add(this.txtTelefono);
             this.panelPrincipal.Controls.Add(this.label5);
-            this.panelPrincipal.Controls.Add(this.cmbAnoFechaNacimiento);
-            this.panelPrincipal.Controls.Add(this.cmbMesFechaNacimiento);
             this.panelPrincipal.Controls.Add(this.label4);
-            this.panelPrincipal.Controls.Add(this.cmbDiaFechaNacimiento);
             this.panelPrincipal.Controls.Add(this.label3);
             this.panelPrincipal.Controls.Add(this.txtsApellido);
             this.panelPrincipal.Controls.Add(this.txtpApellido);
@@ -141,141 +145,6 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Monto de Cobertura";
             // 
-            // cmbAnoFechaCobertura
-            // 
-            this.cmbAnoFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnoFechaCobertura.FormattingEnabled = true;
-            this.cmbAnoFechaCobertura.Items.AddRange(new object[] {
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950",
-            "1949",
-            "1948",
-            "1947",
-            "1946",
-            "1945",
-            "1944",
-            "1943",
-            "1942",
-            "1941",
-            "1940",
-            "1939",
-            "1938",
-            "1937",
-            "1936",
-            "1935",
-            "1934",
-            "1933",
-            "1932",
-            "1931",
-            "1930",
-            "1929",
-            "1928",
-            "1927",
-            "1926",
-            "1925",
-            "1924",
-            "1923",
-            "1922"});
-            this.cmbAnoFechaCobertura.Location = new System.Drawing.Point(285, 510);
-            this.cmbAnoFechaCobertura.Name = "cmbAnoFechaCobertura";
-            this.cmbAnoFechaCobertura.Size = new System.Drawing.Size(70, 28);
-            this.cmbAnoFechaCobertura.TabIndex = 16;
-            this.cmbAnoFechaCobertura.Text = "Año";
-            // 
-            // cmbMesFechaCobertura
-            // 
-            this.cmbMesFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMesFechaCobertura.FormattingEnabled = true;
-            this.cmbMesFechaCobertura.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbMesFechaCobertura.Location = new System.Drawing.Point(166, 510);
-            this.cmbMesFechaCobertura.Name = "cmbMesFechaCobertura";
-            this.cmbMesFechaCobertura.Size = new System.Drawing.Size(113, 28);
-            this.cmbMesFechaCobertura.TabIndex = 15;
-            this.cmbMesFechaCobertura.Text = "Mes";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -285,48 +154,6 @@
             this.label6.Size = new System.Drawing.Size(217, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "Fecha Inicio de Cobertura";
-            // 
-            // cmbDiaFechaCobertura
-            // 
-            this.cmbDiaFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDiaFechaCobertura.FormattingEnabled = true;
-            this.cmbDiaFechaCobertura.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmbDiaFechaCobertura.Location = new System.Drawing.Point(90, 510);
-            this.cmbDiaFechaCobertura.Name = "cmbDiaFechaCobertura";
-            this.cmbDiaFechaCobertura.Size = new System.Drawing.Size(70, 28);
-            this.cmbDiaFechaCobertura.TabIndex = 13;
-            this.cmbDiaFechaCobertura.Text = "Dia";
             // 
             // txtTelefono
             // 
@@ -351,141 +178,6 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Teléfono";
             // 
-            // cmbAnoFechaNacimiento
-            // 
-            this.cmbAnoFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnoFechaNacimiento.FormattingEnabled = true;
-            this.cmbAnoFechaNacimiento.Items.AddRange(new object[] {
-            "2022",
-            "2021",
-            "2020",
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950",
-            "1949",
-            "1948",
-            "1947",
-            "1946",
-            "1945",
-            "1944",
-            "1943",
-            "1942",
-            "1941",
-            "1940",
-            "1939",
-            "1938",
-            "1937",
-            "1936",
-            "1935",
-            "1934",
-            "1933",
-            "1932",
-            "1931",
-            "1930",
-            "1929",
-            "1928",
-            "1927",
-            "1926",
-            "1925",
-            "1924",
-            "1923",
-            "1922"});
-            this.cmbAnoFechaNacimiento.Location = new System.Drawing.Point(285, 274);
-            this.cmbAnoFechaNacimiento.Name = "cmbAnoFechaNacimiento";
-            this.cmbAnoFechaNacimiento.Size = new System.Drawing.Size(70, 28);
-            this.cmbAnoFechaNacimiento.TabIndex = 10;
-            this.cmbAnoFechaNacimiento.Text = "Año";
-            // 
-            // cmbMesFechaNacimiento
-            // 
-            this.cmbMesFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMesFechaNacimiento.FormattingEnabled = true;
-            this.cmbMesFechaNacimiento.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbMesFechaNacimiento.Location = new System.Drawing.Point(164, 274);
-            this.cmbMesFechaNacimiento.Name = "cmbMesFechaNacimiento";
-            this.cmbMesFechaNacimiento.Size = new System.Drawing.Size(115, 28);
-            this.cmbMesFechaNacimiento.TabIndex = 9;
-            this.cmbMesFechaNacimiento.Text = "Mes";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -495,48 +187,6 @@
             this.label4.Size = new System.Drawing.Size(178, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Fecha de Nacimiento";
-            // 
-            // cmbDiaFechaNacimiento
-            // 
-            this.cmbDiaFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDiaFechaNacimiento.FormattingEnabled = true;
-            this.cmbDiaFechaNacimiento.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmbDiaFechaNacimiento.Location = new System.Drawing.Point(88, 274);
-            this.cmbDiaFechaNacimiento.Name = "cmbDiaFechaNacimiento";
-            this.cmbDiaFechaNacimiento.Size = new System.Drawing.Size(70, 28);
-            this.cmbDiaFechaNacimiento.TabIndex = 7;
-            this.cmbDiaFechaNacimiento.Text = "Dia";
             // 
             // label3
             // 
@@ -634,6 +284,15 @@
             this.barraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseDown);
             this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             this.barraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseUp);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(336, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(34, 32);
+            this.panel1.TabIndex = 20;
             // 
             // label1
             // 
@@ -754,14 +413,379 @@
             this.btnInsertarAfiliado.TabIndex = 3;
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // dtpFechaNacimiento
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(336, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(34, 32);
-            this.panel1.TabIndex = 20;
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(401, 285);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(301, 26);
+            this.dtpFechaNacimiento.TabIndex = 20;
+            // 
+            // dtpFechaCobertura
+            // 
+            this.dtpFechaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaCobertura.Location = new System.Drawing.Point(401, 378);
+            this.dtpFechaCobertura.Name = "dtpFechaCobertura";
+            this.dtpFechaCobertura.Size = new System.Drawing.Size(301, 26);
+            this.dtpFechaCobertura.TabIndex = 21;
+            // 
+            // cmbDiaNacimiento
+            // 
+            this.cmbDiaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDiaNacimiento.FormattingEnabled = true;
+            this.cmbDiaNacimiento.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbDiaNacimiento.Location = new System.Drawing.Point(54, 271);
+            this.cmbDiaNacimiento.Name = "cmbDiaNacimiento";
+            this.cmbDiaNacimiento.Size = new System.Drawing.Size(71, 28);
+            this.cmbDiaNacimiento.TabIndex = 22;
+            this.cmbDiaNacimiento.Text = "Dia";
+            // 
+            // cmbAnoNacimiento
+            // 
+            this.cmbAnoNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnoNacimiento.FormattingEnabled = true;
+            this.cmbAnoNacimiento.Items.AddRange(new object[] {
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950",
+            "1949",
+            "1948",
+            "1947",
+            "1946",
+            "1945",
+            "1944",
+            "1943",
+            "1942",
+            "1941",
+            "1940",
+            "1939",
+            "1938",
+            "1937",
+            "1936",
+            "1935",
+            "1934",
+            "1933",
+            "1932",
+            "1931",
+            "1930",
+            "1929",
+            "1928",
+            "1927",
+            "1926",
+            "1925",
+            "1924",
+            "1923",
+            "1922"});
+            this.cmbAnoNacimiento.Location = new System.Drawing.Point(254, 271);
+            this.cmbAnoNacimiento.Name = "cmbAnoNacimiento";
+            this.cmbAnoNacimiento.Size = new System.Drawing.Size(71, 28);
+            this.cmbAnoNacimiento.TabIndex = 23;
+            this.cmbAnoNacimiento.Text = "Año";
+            // 
+            // cmbMesNacimiento
+            // 
+            this.cmbMesNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMesNacimiento.FormattingEnabled = true;
+            this.cmbMesNacimiento.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.cmbMesNacimiento.Location = new System.Drawing.Point(131, 271);
+            this.cmbMesNacimiento.Name = "cmbMesNacimiento";
+            this.cmbMesNacimiento.Size = new System.Drawing.Size(117, 28);
+            this.cmbMesNacimiento.TabIndex = 24;
+            this.cmbMesNacimiento.Text = "Mes";
+            // 
+            // cmbMesCobertura
+            // 
+            this.cmbMesCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMesCobertura.FormattingEnabled = true;
+            this.cmbMesCobertura.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMesCobertura.Location = new System.Drawing.Point(131, 512);
+            this.cmbMesCobertura.Name = "cmbMesCobertura";
+            this.cmbMesCobertura.Size = new System.Drawing.Size(117, 28);
+            this.cmbMesCobertura.TabIndex = 27;
+            this.cmbMesCobertura.Text = "Mes";
+            // 
+            // cmbAnoCobertura
+            // 
+            this.cmbAnoCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnoCobertura.FormattingEnabled = true;
+            this.cmbAnoCobertura.Items.AddRange(new object[] {
+            "2024",
+            "2023",
+            "2022",
+            "2021",
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950",
+            "1949",
+            "1948",
+            "1947",
+            "1946",
+            "1945",
+            "1944",
+            "1943",
+            "1942",
+            "1941",
+            "1940",
+            "1939",
+            "1938",
+            "1937",
+            "1936",
+            "1935",
+            "1934",
+            "1933",
+            "1932",
+            "1931",
+            "1930",
+            "1929",
+            "1928",
+            "1927",
+            "1926",
+            "1925",
+            "1924",
+            "1923",
+            "1922"});
+            this.cmbAnoCobertura.Location = new System.Drawing.Point(254, 512);
+            this.cmbAnoCobertura.Name = "cmbAnoCobertura";
+            this.cmbAnoCobertura.Size = new System.Drawing.Size(71, 28);
+            this.cmbAnoCobertura.TabIndex = 26;
+            this.cmbAnoCobertura.Text = "Año";
+            // 
+            // cmbDiaCobertura
+            // 
+            this.cmbDiaCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDiaCobertura.FormattingEnabled = true;
+            this.cmbDiaCobertura.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cmbDiaCobertura.Location = new System.Drawing.Point(54, 512);
+            this.cmbDiaCobertura.Name = "cmbDiaCobertura";
+            this.cmbDiaCobertura.Size = new System.Drawing.Size(71, 28);
+            this.cmbDiaCobertura.TabIndex = 25;
+            this.cmbDiaCobertura.Text = "Dia";
             // 
             // frmRegistroAfiliado
             // 
@@ -776,6 +800,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistroAfiliado";
             this.Text = "Registro Afiliado";
+            this.Load += new System.EventHandler(this.frmRegistroAfiliado_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.barraSuperior.ResumeLayout(false);
@@ -801,21 +826,23 @@
         private System.Windows.Forms.TextBox txtpApellido;
         private System.Windows.Forms.TextBox txtsNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbAnoFechaNacimiento;
-        private System.Windows.Forms.ComboBox cmbMesFechaNacimiento;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbDiaFechaNacimiento;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbAnoFechaCobertura;
-        private System.Windows.Forms.ComboBox cmbMesFechaCobertura;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbDiaFechaCobertura;
         private System.Windows.Forms.TextBox txtMontoCobertura;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaCobertura;
+        private System.Windows.Forms.ComboBox cmbMesCobertura;
+        private System.Windows.Forms.ComboBox cmbAnoCobertura;
+        private System.Windows.Forms.ComboBox cmbDiaCobertura;
+        private System.Windows.Forms.ComboBox cmbMesNacimiento;
+        private System.Windows.Forms.ComboBox cmbAnoNacimiento;
+        private System.Windows.Forms.ComboBox cmbDiaNacimiento;
     }
 }
 

@@ -163,16 +163,22 @@ namespace Proyecto_3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if ((cmbDiaFechaNacimiento.SelectedIndex == -1) || (cmbMesFechaNacimiento.SelectedIndex == -1) || (cmbAnoFechaNacimiento.SelectedIndex == -1))
-            {
-                MessageBox.Show("Debe completar la fecha de nacimiento", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if((cmbDiaFechaCobertura.SelectedIndex == -1) || (cmbMesFechaCobertura.SelectedIndex == -1) || (cmbAnoFechaCobertura.SelectedIndex == -1))
-            {
-                MessageBox.Show("Debe completar la fecha de cobertura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            conexion obj2 = new conexion();
+
+            /*String fecha_nacimiento = DateTime.Parse(dtpFechaNacimiento.Value.Date.ToString("MM-dd-yyyy")).ToShortDateString();
+            String fecha_cobertura = DateTime.Parse(dtpFechaCobertura.Value.Date.ToString("MM-dd-yyyy")).ToShortDateString();
+            DateTime fechaNacimiento = Convert.ToDateTime(dtpFechaNacimiento.Value.Date.ToString("yyyyy-MM-dd"), System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);
+            DateTime fechaCobertura = Convert.ToDateTime(dtpFechaCobertura.Value.Date.ToString("yyyyy-MM-dd"),System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);*/
+            String fechaNacimiento = cmbMesNacimiento.SelectedItem.ToString() + "/" + cmbDiaNacimiento.SelectedItem.ToString() + "/" + cmbAnoNacimiento.SelectedItem.ToString();
+            String fechaCobertura = cmbMesCobertura.SelectedItem.ToString() + "/" + cmbDiaCobertura.SelectedItem.ToString() + "/" + cmbAnoCobertura.SelectedItem.ToString();
+            String fecha_Nacimiento = DateTime.Parse(fechaNacimiento).ToShortDateString();
+            String fecha_Cobertura = DateTime.Parse(fechaNacimiento).ToShortDateString();
+            MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fecha_Nacimiento,Convert.ToInt64(txtTelefono.Text),fecha_Cobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
+        }
+
+        private void frmRegistroAfiliado_Load(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
