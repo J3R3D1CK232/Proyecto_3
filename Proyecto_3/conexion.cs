@@ -18,7 +18,6 @@ class conexion
         {
             cn = new SqlConnection("Data Source=J4K0232\\SQLEXPRESS;Initial Catalog=Proyecto_3;Integrated Security=True");
             cn.Open();
-            MessageBox.Show("Conectado");
         }
         catch (Exception ex)
         {
@@ -28,11 +27,11 @@ class conexion
 
     public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, String fechaNacimiento, Int64 telefono, String fechaCobertura, decimal monto ,string estado)
     {
-        string salida = "Información de afiliado registrada correctamente";
+        string salida = "Registro Exitoso";
         try
         {
             cmd = new SqlCommand("Insert into afiliado(pNombre,sNombre,pApellido,sApellido,fecha_nacimiento,noTelefono,fechaIniciocobertura,montoCobertura,estado) values ('" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + fechaNacimiento + "'," + telefono + ",'" + fechaCobertura + "','" + monto + "','" + estado + "')", cn);
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();            
         }
         catch (Exception ex)
         {

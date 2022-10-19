@@ -165,15 +165,23 @@ namespace Proyecto_3
         {
             conexion obj2 = new conexion();
 
-            /*String fecha_nacimiento = DateTime.Parse(dtpFechaNacimiento.Value.Date.ToString("MM-dd-yyyy")).ToShortDateString();
-            String fecha_cobertura = DateTime.Parse(dtpFechaCobertura.Value.Date.ToString("MM-dd-yyyy")).ToShortDateString();
-            DateTime fechaNacimiento = Convert.ToDateTime(dtpFechaNacimiento.Value.Date.ToString("yyyyy-MM-dd"), System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);
-            DateTime fechaCobertura = Convert.ToDateTime(dtpFechaCobertura.Value.Date.ToString("yyyyy-MM-dd"),System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat);*/
+            if ((cmbDiaNacimiento.SelectedIndex == -1) || (cmbMesNacimiento.SelectedIndex == -1) || (cmbAnoNacimiento.SelectedIndex == -1))
+            {
+                MessageBox.Show("Debe completar la fecha de nacimiento","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if ((cmbDiaCobertura.SelectedIndex == -1) || (cmbMesCobertura.SelectedIndex == -1) || (cmbAnoCobertura.SelectedIndex == -1))
+            {
+                MessageBox.Show("Debe completar la fecha de cobertura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             String fechaNacimiento = cmbMesNacimiento.SelectedItem.ToString() + "/" + cmbDiaNacimiento.SelectedItem.ToString() + "/" + cmbAnoNacimiento.SelectedItem.ToString();
             String fechaCobertura = cmbMesCobertura.SelectedItem.ToString() + "/" + cmbDiaCobertura.SelectedItem.ToString() + "/" + cmbAnoCobertura.SelectedItem.ToString();
-            String fecha_Nacimiento = DateTime.Parse(fechaNacimiento).ToShortDateString();
-            String fecha_Cobertura = DateTime.Parse(fechaNacimiento).ToShortDateString();
-            MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fecha_Nacimiento,Convert.ToInt64(txtTelefono.Text),fecha_Cobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
+            /*String fecha_Nacimiento = DateTime.Parse(fechaNacimiento).ToShortDateString();
+            String fecha_Cobertura = DateTime.Parse(fechaCobertura).ToShortDateString();*/
+            MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fechaNacimiento,Convert.ToInt64(txtTelefono.Text),fechaCobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
         }
 
         private void frmRegistroAfiliado_Load(object sender, EventArgs e)
