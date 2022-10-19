@@ -99,21 +99,21 @@
             this.cmbMesCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMesCobertura.FormattingEnabled = true;
             this.cmbMesCobertura.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
             this.cmbMesCobertura.Location = new System.Drawing.Point(131, 512);
             this.cmbMesCobertura.Name = "cmbMesCobertura";
-            this.cmbMesCobertura.Size = new System.Drawing.Size(74, 28);
+            this.cmbMesCobertura.Size = new System.Drawing.Size(130, 28);
             this.cmbMesCobertura.TabIndex = 27;
             this.cmbMesCobertura.Text = "Mes";
             // 
@@ -225,7 +225,7 @@
             "1924",
             "1923",
             "1922"});
-            this.cmbAnoCobertura.Location = new System.Drawing.Point(211, 512);
+            this.cmbAnoCobertura.Location = new System.Drawing.Point(267, 512);
             this.cmbAnoCobertura.Name = "cmbAnoCobertura";
             this.cmbAnoCobertura.Size = new System.Drawing.Size(71, 28);
             this.cmbAnoCobertura.TabIndex = 26;
@@ -278,21 +278,21 @@
             this.cmbMesNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMesNacimiento.FormattingEnabled = true;
             this.cmbMesNacimiento.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
             this.cmbMesNacimiento.Location = new System.Drawing.Point(131, 271);
             this.cmbMesNacimiento.Name = "cmbMesNacimiento";
-            this.cmbMesNacimiento.Size = new System.Drawing.Size(74, 28);
+            this.cmbMesNacimiento.Size = new System.Drawing.Size(130, 28);
             this.cmbMesNacimiento.TabIndex = 24;
             this.cmbMesNacimiento.Text = "Mes";
             // 
@@ -404,7 +404,7 @@
             "1924",
             "1923",
             "1922"});
-            this.cmbAnoNacimiento.Location = new System.Drawing.Point(211, 271);
+            this.cmbAnoNacimiento.Location = new System.Drawing.Point(267, 271);
             this.cmbAnoNacimiento.Name = "cmbAnoNacimiento";
             this.cmbAnoNacimiento.Size = new System.Drawing.Size(71, 28);
             this.cmbAnoNacimiento.TabIndex = 23;
@@ -515,7 +515,7 @@
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(85, 381);
-            this.txtTelefono.MaxLength = 11;
+            this.txtTelefono.MaxLength = 8;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(176, 26);
             this.txtTelefono.TabIndex = 12;

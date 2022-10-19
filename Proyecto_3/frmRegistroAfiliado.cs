@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
@@ -177,11 +178,118 @@ namespace Proyecto_3
                 return;
             }
 
-            string fechaNacimiento = cmbMesNacimiento.SelectedItem.ToString() + "/" + cmbDiaNacimiento.SelectedItem.ToString() + "/" + cmbAnoNacimiento.SelectedItem.ToString();
-            string fechaCobertura = cmbMesCobertura.SelectedItem.ToString() + "/" + cmbDiaCobertura.SelectedItem.ToString() + "/" + cmbAnoCobertura.SelectedItem.ToString();
+            //convertir los meses de letras a numeros 
+            string mesNacimiento = cmbMesNacimiento.SelectedItem.ToString();
+            string mesNacimientoNumero = "";
+            string mesCobertura = cmbMesCobertura.SelectedItem.ToString();
+            string mesCoberturaNumero = "";
+
+            if (mesNacimiento == "Enero") {
+                mesNacimientoNumero = "01";
+            }
+            if (mesNacimiento == "Febrero")
+            {
+                mesNacimientoNumero = "02";
+            }
+            if (mesNacimiento == "Marzo")
+            {
+                mesNacimientoNumero = "03";
+            }
+            if (mesNacimiento == "Abril")
+            {
+                mesNacimientoNumero = "04";
+            }
+            if (mesNacimiento == "Mayo")
+            {
+                mesNacimientoNumero = "05";
+            }
+            if (mesNacimiento == "Junio")
+            {
+                mesNacimientoNumero = "06";
+            }
+            if (mesNacimiento == "Julio")
+            {
+                mesNacimientoNumero = "07";
+            }
+            if (mesNacimiento == "Agosto")
+            {
+                mesNacimientoNumero = "08";
+            }
+            if (mesNacimiento == "Septiembre")
+            {
+                mesNacimientoNumero = "09";
+            }
+            if (mesNacimiento == "Octubre")
+            {
+                mesNacimientoNumero = "10";
+            }
+            if (mesNacimiento == "Noviembre")
+            {
+                mesNacimientoNumero = "11";
+            }
+            if (mesNacimiento == "Diciembre")
+            {
+                mesNacimientoNumero = "12";
+            }
+
+            //mes cobertura a numeros
+
+            if (mesCobertura == "Enero")
+            {
+                mesCoberturaNumero = "01";
+            }
+            if (mesCobertura == "Febrero")
+            {
+                mesCoberturaNumero = "02";
+            }
+            if (mesCobertura == "Marzo")
+            {
+                mesCoberturaNumero = "03";
+            }
+            if (mesCobertura == "Abril")
+            {
+                mesCoberturaNumero = "04";
+            }
+            if (mesCobertura == "Mayo")
+            {
+                mesCoberturaNumero = "05";
+            }
+            if (mesCobertura == "Junio")
+            {
+                mesCoberturaNumero = "06";
+            }
+            if (mesCobertura == "Julio")
+            {
+                mesCoberturaNumero = "07";
+            }
+            if (mesCobertura == "Agosto")
+            {
+                mesCoberturaNumero = "08";
+            }
+            if (mesCobertura == "Septiembre")
+            {
+                mesCoberturaNumero = "09";
+            }
+            if (mesCobertura == "Octubre")
+            {
+                mesCoberturaNumero = "10";
+            }
+            if (mesCobertura == "Noviembre")
+            {
+                mesCoberturaNumero = "11";
+            }
+            if (mesCobertura == "Diciembre")
+            {
+                mesCoberturaNumero = "12";
+            }
+
+
+
+            string fechaNacimiento = /*cmbMesNacimiento.SelectedItem.ToString()*/ mesNacimientoNumero + "/" + cmbDiaNacimiento.SelectedItem.ToString() + "/" + cmbAnoNacimiento.SelectedItem.ToString();
+            string fechaCobertura = /*cmbMesCobertura.SelectedItem.ToString()*/ mesCoberturaNumero + "/" + cmbDiaCobertura.SelectedItem.ToString() + "/" + cmbAnoCobertura.SelectedItem.ToString();
             /*String fecha_Nacimiento = DateTime.Parse(fechaNacimiento).ToShortDateString();
             String fecha_Cobertura = DateTime.Parse(fechaCobertura).ToShortDateString();*/
-            MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fechaNacimiento,Convert.ToInt64(txtTelefono.Text),fechaCobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
+            MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fechaNacimiento,Convert.ToInt32(txtTelefono.Text),fechaCobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
 
         }
 
