@@ -31,7 +31,6 @@ namespace Proyecto_3
         private void button1_Click(object sender, EventArgs e)
         {
             frmListaAfiliado listaAfiliado = new frmListaAfiliado();
-            listaAfiliado.barraSuperior.BackColor = Color.FromArgb(36, 65, 95);
             this.Close();
 
         }
