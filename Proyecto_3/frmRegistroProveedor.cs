@@ -83,6 +83,11 @@ namespace Proyecto_3
             this.Close();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 
