@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaAfiliado));
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
+            this.ttBusqueda = new System.Windows.Forms.ToolTip(this.components);
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaAfiliado)).BeginInit();
             this.barraSuperior.SuspendLayout();
@@ -77,6 +79,7 @@
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // dgvListaAfiliado
             // 
@@ -270,6 +273,13 @@
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
             this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
             // 
+            // ttBusqueda
+            // 
+            this.ttBusqueda.IsBalloon = true;
+            this.ttBusqueda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttBusqueda.ToolTipTitle = "Información";
+            this.ttBusqueda.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // frmListaAfiliado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,7 +305,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.Panel barraSuperior;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnInsertarAfiliado;
@@ -309,6 +318,8 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvListaAfiliado;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ToolTip ttBusqueda;
+        private System.Windows.Forms.Panel barraSuperior;
     }
 }
 

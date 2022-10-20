@@ -12,13 +12,12 @@ using System.Windows.Forms;
 
 namespace Proyecto_3
 {
-    public partial class frmListaAfiliado : Form
+    public partial class frmModificarAfiliado : Form
     {
-        public frmListaAfiliado()
+        public frmModificarAfiliado()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
-            this.ttBusqueda.SetToolTip(this.txtBuscar, "Ingresar Código de Afiliado para realizar la busqueda");
+            StartPosition = FormStartPosition.CenterScreen;      
 
         }
         int m, mx, my;
@@ -31,7 +30,10 @@ namespace Proyecto_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmListaAfiliado listaAfiliado = new frmListaAfiliado();
+            listaAfiliado.barraSuperior.BackColor = Color.FromArgb(36, 65, 95);
+            this.Close();
+
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -62,37 +64,28 @@ namespace Proyecto_3
         {
             frmRegistroAfiliado frm = new frmRegistroAfiliado();
             frm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnListaAfiliado_Click(object sender, EventArgs e)
         {
-            
+            frmListaAfiliado frm = new frmListaAfiliado();
+            frm.Show();
+            this.Hide();
         }
 
         private void btnInsertarProveedor_Click(object sender, EventArgs e)
         {
             frmRegistroProveedor frm = new frmRegistroProveedor();
             frm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void listaProveedor_Click(object sender, EventArgs e)
         {
             frmListaProveedor frm = new frmListaProveedor();
             frm.Show();
-            this.Close();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            frmModificarAfiliado modificarAfiliado = new frmModificarAfiliado();
-            modificarAfiliado.ShowDialog();
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            
+            this.Hide();
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)

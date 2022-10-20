@@ -15,3 +15,4 @@ C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyect
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmListaAfiliado.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmRegistroProveedor.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmListaProveedor.resources
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmModificarAfiliado.resources
