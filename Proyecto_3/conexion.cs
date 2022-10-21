@@ -35,7 +35,7 @@ class conexion
         }
         catch (Exception ex)
         {
-            salida = "No se pudo guardar la información: " + ex.ToString();
+            salida = "No se pudo guardar la información, Error: " + ex.ToString() + " Fin Error";
         }
         return salida;
     }
@@ -50,7 +50,7 @@ class conexion
         }
         catch (Exception ex)
         {
-            MessageBox.Show("No seconsulto la informacion: " + ex.ToString());
+            MessageBox.Show("No se pudo consultar la información, Error: " + ex.ToString() + " Fin Error");
         }
     }
 
@@ -65,7 +65,7 @@ class conexion
         }
         catch (Exception ex)
         {
-            MessageBox.Show("No se actualizó el registro: " + ex.ToString());
+            MessageBox.Show("No se pudo realizar la búsqueda, Error: " + ex.ToString() + " Fin Error");
         }
     }
 }

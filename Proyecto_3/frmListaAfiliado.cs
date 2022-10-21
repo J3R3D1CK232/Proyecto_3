@@ -103,15 +103,31 @@ namespace Proyecto_3
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Int64 buscarId = Convert.ToInt64(txtBuscar.Text);
-            conexion obj1 = new conexion();
-            obj1.buscarAfiliado(dgvListaAfiliado,buscarId);
+            if (txtBuscar.Text == "")
+            {
+                MessageBox.Show("Debe Ingresar un valor para realizar la búsqueda","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Int64 buscarId = Convert.ToInt64(txtBuscar.Text);
+                conexion obj1 = new conexion();
+                obj1.buscarAfiliado(dgvListaAfiliado, buscarId);
+            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
             obj1.cargarAfiliado(dgvListaAfiliado);
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Solo se permite ingresar numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
