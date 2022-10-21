@@ -103,9 +103,15 @@ namespace Proyecto_3
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string buscarId = txtBuscar.Text;
+            Int64 buscarId = Convert.ToInt64(txtBuscar.Text);
             conexion obj1 = new conexion();
             obj1.buscarAfiliado(dgvListaAfiliado,buscarId);
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+            obj1.cargarAfiliado(dgvListaAfiliado);
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)

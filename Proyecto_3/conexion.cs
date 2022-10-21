@@ -43,7 +43,7 @@ class conexion
     {
         try
         {
-            adaptador = new SqlDataAdapter("EXEC sp_afiliado_seleccion;", cn);
+            adaptador = new SqlDataAdapter("EXEC sp_afiliado_leer;", cn);
             ds = new DataSet();
             adaptador.Fill(ds, "afiliado");
             tabla.DataSource = ds.Tables["afiliado"];
@@ -54,11 +54,11 @@ class conexion
         }
     }
 
-    public void buscarAfiliado(DataGridView tabla, string id)
+    public void buscarAfiliado(DataGridView tabla, Int64 id)
     {
         try
         {
-            adaptador = new SqlDataAdapter("Select  *  from afiliado Where id_afiliado like '" + "%" + id + "%" + "'", cn);
+            adaptador = new SqlDataAdapter("EXEC sp_afiliado_buscar @IDAFILIADO = " + id + ";", cn);
             ds = new DataSet();
             adaptador.Fill(ds, "afiliado");
             tabla.DataSource = ds.Tables["afiliado"];

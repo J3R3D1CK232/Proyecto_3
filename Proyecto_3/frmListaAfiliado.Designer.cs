@@ -120,6 +120,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(176, 26);
             this.txtBuscar.TabIndex = 3;
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label2
             // 
