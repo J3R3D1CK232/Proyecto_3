@@ -39,4 +39,18 @@ class conexion
         }
         return salida;
     }
+    public void cargarPROFESOR(DataGridView tabla)
+    {
+        try
+        {
+            adaptador = new SqlDataAdapter("EXEC sp_afiliado_seleccion;", cn);
+            ds = new DataSet();
+            adaptador.Fill(ds, "afiliado");
+            tabla.DataSource = ds.Tables["afiliado"];
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("No seconsulto la informacion: " + ex.ToString());
+        }
+    }
 }

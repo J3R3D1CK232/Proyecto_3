@@ -83,8 +83,15 @@
             // 
             // dgvListaAfiliado
             // 
+            this.dgvListaAfiliado.AllowUserToAddRows = false;
+            this.dgvListaAfiliado.AllowUserToDeleteRows = false;
+            this.dgvListaAfiliado.AllowUserToResizeColumns = false;
+            this.dgvListaAfiliado.AllowUserToResizeRows = false;
+            this.dgvListaAfiliado.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListaAfiliado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvListaAfiliado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaAfiliado.Location = new System.Drawing.Point(12, 198);
+            this.dgvListaAfiliado.MultiSelect = false;
             this.dgvListaAfiliado.Name = "dgvListaAfiliado";
             this.dgvListaAfiliado.Size = new System.Drawing.Size(1000, 430);
             this.dgvListaAfiliado.TabIndex = 6;
@@ -293,6 +300,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaAfiliado";
             this.Text = "Lista Afiliados";
+            this.Load += new System.EventHandler(this.frmListaAfiliado_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaAfiliado)).EndInit();

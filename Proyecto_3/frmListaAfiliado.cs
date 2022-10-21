@@ -95,6 +95,12 @@ namespace Proyecto_3
             
         }
 
+        private void frmListaAfiliado_Load(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+            obj1.cargarPROFESOR(dgvListaAfiliado);
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 
