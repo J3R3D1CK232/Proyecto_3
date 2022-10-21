@@ -39,7 +39,7 @@ class conexion
         }
         return salida;
     }
-    public void cargarPROFESOR(DataGridView tabla)
+    public void cargarAfiliado(DataGridView tabla)
     {
         try
         {
@@ -51,6 +51,21 @@ class conexion
         catch (Exception ex)
         {
             MessageBox.Show("No seconsulto la informacion: " + ex.ToString());
+        }
+    }
+
+    public void buscarAfiliado(DataGridView tabla, string id)
+    {
+        try
+        {
+            adaptador = new SqlDataAdapter("Select  *  from afiliado Where id_afiliado like '" + "%" + id + "%" + "'", cn);
+            ds = new DataSet();
+            adaptador.Fill(ds, "afiliado");
+            tabla.DataSource = ds.Tables["afiliado"];
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("No se actualizó el registro: " + ex.ToString());
         }
     }
 }

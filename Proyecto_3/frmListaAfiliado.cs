@@ -98,7 +98,14 @@ namespace Proyecto_3
         private void frmListaAfiliado_Load(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
-            obj1.cargarPROFESOR(dgvListaAfiliado);
+            obj1.cargarAfiliado(dgvListaAfiliado);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string buscarId = txtBuscar.Text;
+            conexion obj1 = new conexion();
+            obj1.buscarAfiliado(dgvListaAfiliado,buscarId);
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
