@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaProveedor));
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
+            this.ttBusqueda = new System.Windows.Forms.ToolTip(this.components);
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProveedor)).BeginInit();
             this.barraSuperior.SuspendLayout();
@@ -108,6 +110,7 @@
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -119,6 +122,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(176, 26);
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label2
             // 
@@ -258,6 +262,12 @@
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
             this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
             // 
+            // ttBusqueda
+            // 
+            this.ttBusqueda.IsBalloon = true;
+            this.ttBusqueda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttBusqueda.ToolTipTitle = "Información";
+            // 
             // frmListaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +305,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip ttBusqueda;
     }
 }
 

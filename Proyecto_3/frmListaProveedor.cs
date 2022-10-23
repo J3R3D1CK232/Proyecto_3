@@ -17,8 +17,8 @@ namespace Proyecto_3
         public frmListaProveedor()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;      
-
+            StartPosition = FormStartPosition.CenterScreen;
+            this.ttBusqueda.SetToolTip(this.txtBuscar, "Ingresar Código de Afiliado para realizar la busqueda");
         }
         int m, mx, my;
         private void barraSuperior_MouseDown(object sender, MouseEventArgs e)
@@ -84,6 +84,26 @@ namespace Proyecto_3
         }
 
         private void frmListaProveedor_Load(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+            obj1.cargarProveedor(dgvListaProveedor);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                MessageBox.Show("Debe Ingresar un valor para realizar la búsqueda", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Int64 buscarId = Convert.ToInt64(txtBuscar.Text);
+                conexion obj1 = new conexion();
+                obj1.buscarProveedor(dgvListaProveedor, buscarId);
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
             obj1.cargarProveedor(dgvListaProveedor);

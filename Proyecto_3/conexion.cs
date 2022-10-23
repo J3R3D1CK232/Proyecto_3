@@ -16,7 +16,7 @@ class conexion
     {
         try
         {
-            cn = new SqlConnection("Data Source=J4K0232\\SQLEXPRESS;Initial Catalog=Proyecto_3;Integrated Security=True");
+            cn = new SqlConnection("Server=tcp:proyecto3-server.database.windows.net,1433;Initial Catalog=Proyecto_3;Persist Security Info=False;User ID=Administrador;Password=Admin_2022;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             cn.Open();
         }
         catch (Exception ex)
@@ -112,6 +112,21 @@ class conexion
         catch (Exception ex)
         {
             MessageBox.Show("No se pudo consultar la información, Error: " + ex.ToString() + " Fin Error");
+        }
+    }
+
+    public void buscarProveedor(DataGridView tabla, Int64 id)
+    {
+        try
+        {
+            adaptador = new SqlDataAdapter("EXEC sp_proveedor_buscar @IDPROVEEDOR = " + id + ";", cn);
+            ds = new DataSet();
+            adaptador.Fill(ds, "proveedor");
+            tabla.DataSource = ds.Tables["proveedor"];
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("No se pudo realizar la búsqueda, Error: " + ex.ToString() + " Fin Error");
         }
     }
 }
