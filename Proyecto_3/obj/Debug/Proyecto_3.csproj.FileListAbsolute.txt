@@ -20,3 +20,4 @@ C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyect
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.application
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.exe.manifest
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.application
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.TrustInfo.xml
