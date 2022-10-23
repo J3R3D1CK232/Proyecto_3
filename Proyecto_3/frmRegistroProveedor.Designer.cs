@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroProveedor));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.txtNitProveedor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.barraSuperior = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.listaProveedor = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnInsertarProveedor = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
-            this.txtNitProveedor = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,67 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1024, 640);
             this.panelPrincipal.TabIndex = 0;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(13)))));
+            this.btnRegistrar.Location = new System.Drawing.Point(479, 521);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(101, 36);
+            this.btnRegistrar.TabIndex = 9;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(393, 302);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Razón Social";
+            // 
+            // txtRazonSocial
+            // 
+            this.txtRazonSocial.BackColor = System.Drawing.Color.White;
+            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Location = new System.Drawing.Point(415, 354);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(241, 26);
+            this.txtRazonSocial.TabIndex = 6;
+            this.txtRazonSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNitProveedor
+            // 
+            this.txtNitProveedor.BackColor = System.Drawing.Color.White;
+            this.txtNitProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNitProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNitProveedor.Location = new System.Drawing.Point(415, 240);
+            this.txtNitProveedor.MaxLength = 7;
+            this.txtNitProveedor.Name = "txtNitProveedor";
+            this.txtNitProveedor.Size = new System.Drawing.Size(241, 26);
+            this.txtNitProveedor.TabIndex = 5;
+            this.txtNitProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNitProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNitProveedor_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(393, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "NIT";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // barraSuperior
             // 
@@ -84,6 +145,26 @@
             this.barraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseDown);
             this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             this.barraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseUp);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(353, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(34, 32);
+            this.panel1.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(393, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Registro de Proveedor";
             // 
             // listaProveedor
             // 
@@ -194,84 +275,6 @@
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
             this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
             // 
-            // txtRazonSocial
-            // 
-            this.txtRazonSocial.BackColor = System.Drawing.Color.White;
-            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(415, 354);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(241, 26);
-            this.txtRazonSocial.TabIndex = 6;
-            this.txtRazonSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNitProveedor
-            // 
-            this.txtNitProveedor.BackColor = System.Drawing.Color.White;
-            this.txtNitProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNitProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNitProveedor.Location = new System.Drawing.Point(415, 240);
-            this.txtNitProveedor.Name = "txtNitProveedor";
-            this.txtNitProveedor.Size = new System.Drawing.Size(241, 26);
-            this.txtNitProveedor.TabIndex = 5;
-            this.txtNitProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(393, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "NIT";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(353, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(34, 32);
-            this.panel1.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(393, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Registro de Proveedor";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(393, 302);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Razón Social";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(213)))), ((int)(((byte)(11)))));
-            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(13)))));
-            this.btnRegistrar.Location = new System.Drawing.Point(479, 521);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(101, 36);
-            this.btnRegistrar.TabIndex = 9;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            // 
             // frmRegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +288,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistroProveedor";
             this.Text = "Registro Proveedor";
+            this.Load += new System.EventHandler(this.frmRegistroProveedor_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.barraSuperior.ResumeLayout(false);

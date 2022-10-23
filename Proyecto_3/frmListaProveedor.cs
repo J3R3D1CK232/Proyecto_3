@@ -83,6 +83,12 @@ namespace Proyecto_3
             
         }
 
+        private void frmListaProveedor_Load(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+            obj1.cargarProveedor(dgvListaProveedor);
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 

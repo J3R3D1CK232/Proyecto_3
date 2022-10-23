@@ -8,7 +8,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Proyecto_3
 {
@@ -86,6 +89,26 @@ namespace Proyecto_3
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmRegistroProveedor_Load(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            conexion obj2 = new conexion();
+            MessageBox.Show(obj2.insertarProveedor(Convert.ToInt64(txtNitProveedor.Text),txtRazonSocial.Text,"Activo")); ;
+        }
+
+        private void txtNitProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Solo se permite ingresar numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)

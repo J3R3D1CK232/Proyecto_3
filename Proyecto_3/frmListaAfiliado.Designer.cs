@@ -87,12 +87,15 @@
             this.dgvListaAfiliado.AllowUserToDeleteRows = false;
             this.dgvListaAfiliado.AllowUserToResizeColumns = false;
             this.dgvListaAfiliado.AllowUserToResizeRows = false;
+            this.dgvListaAfiliado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaAfiliado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvListaAfiliado.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListaAfiliado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvListaAfiliado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgvListaAfiliado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaAfiliado.Location = new System.Drawing.Point(12, 198);
             this.dgvListaAfiliado.MultiSelect = false;
             this.dgvListaAfiliado.Name = "dgvListaAfiliado";
+            this.dgvListaAfiliado.ReadOnly = true;
             this.dgvListaAfiliado.Size = new System.Drawing.Size(1000, 430);
             this.dgvListaAfiliado.TabIndex = 6;
             // 
