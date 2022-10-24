@@ -109,6 +109,36 @@ namespace Proyecto_3
             obj1.cargarProveedor(dgvListaProveedor);
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+            int numeroFila;
+
+            if (dgvListaProveedor.SelectedRows.Count > 0)
+            {
+                numeroFila = dgvListaProveedor.CurrentRow.Index;
+                int idSeleccion = Convert.ToInt32(dgvListaProveedor.SelectedRows[numeroFila].Cells[0].Value);
+                DialogResult resultado = MessageBox.Show("Desea eliminar el dato seleccionado", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.Yes)
+                {
+                    obj1.eliminarProveedor(idSeleccion, dgvListaProveedor);
+                }
+                else if (resultado == DialogResult.No)
+                {
+                    obj1.cargarProveedor(dgvListaProveedor);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para realizar la accion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 

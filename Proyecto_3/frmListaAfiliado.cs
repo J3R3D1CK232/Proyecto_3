@@ -130,6 +130,31 @@ namespace Proyecto_3
             }
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            conexion obj1 = new conexion();
+            int numeroFila;
+
+            if (dgvListaAfiliado.SelectedRows.Count > 0)
+            {
+                numeroFila = dgvListaAfiliado.CurrentRow.Index;
+                int idSeleccion = Convert.ToInt32(dgvListaAfiliado.SelectedRows[numeroFila].Cells[0].Value);                
+                DialogResult resultado = MessageBox.Show("Desea eliminar el dato seleccionado", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.Yes)
+                {
+                    obj1.eliminarAfiliado(idSeleccion, dgvListaAfiliado);
+                }
+                else if (resultado == DialogResult.No)
+                {
+                    obj1.cargarAfiliado(dgvListaAfiliado);
+                }
+            }
+            else {
+                MessageBox.Show("Seleccione una fila para realizar la accion","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Warning);            
+            }            
+            
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 

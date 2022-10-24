@@ -1,6 +1,3 @@
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.exe.config
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.exe
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.pdb
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\MaterialSkin.dll
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.AssemblyReference.cache
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.SuggestedBindingRedirects.cache
@@ -8,16 +5,19 @@ C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyect
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.GenerateResource.cache
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.CoreCompileInputs.cache
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.csproj.CopyComplete
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.exe
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.pdb
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.principal.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmRegistroAfiliado.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmListaAfiliado.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmRegistroProveedor.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmListaProveedor.resources
 C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.frmModificarAfiliado.resources
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.exe.manifest
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Proyecto_3.application
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.exe.manifest
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.application
-C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Proyecto_3.TrustInfo.xml
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Mi Buen Seguro.exe.config
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Mi Buen Seguro.exe.manifest
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Mi Buen Seguro.application
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Mi Buen Seguro.exe
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\bin\Debug\Mi Buen Seguro.pdb
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Mi Buen Seguro.TrustInfo.xml
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Mi Buen Seguro.exe.manifest
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Mi Buen Seguro.application
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Mi Buen Seguro.exe
+C:\Users\escob\Proyectos\Desarrollo Web\Proyecto_3\Aplicacion_Escritorio\Proyecto_3\Proyecto_3\obj\Debug\Mi Buen Seguro.pdb

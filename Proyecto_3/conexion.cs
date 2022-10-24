@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 class conexion
 {
@@ -25,13 +26,13 @@ class conexion
         }
     }
 
-    public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, string fechaNacimiento, Int64 telefono, string fechaCobertura, decimal monto ,string estado)
+    public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, string fechaNacimiento, Int64 telefono, string fechaCobertura, decimal monto, string estado)
     {
         string salida = "Registro Exitoso";
         try
         {
             cmd = new SqlCommand("Insert into afiliado(pNombre,sNombre,pApellido,sApellido,fecha_nacimiento,noTelefono,fechaIniciocobertura,montoCobertura,estado) values ('" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + fechaNacimiento + "'," + telefono + ",'" + fechaCobertura + "','" + monto + "','" + estado + "')", cn);
-            cmd.ExecuteNonQuery();            
+            cmd.ExecuteNonQuery();
         }
         catch (Exception ex)
         {
@@ -69,10 +70,10 @@ class conexion
         }
     }
 
-    public string insertarProveedor(Int64 nit, string razonSocial,string Estado) {
+    public string insertarProveedor(Int64 nit, string razonSocial, string Estado) {
         string salida = string.Empty;
         int retorno = 0;
-        cmd = new SqlCommand("Select ISNULL(MAX(id_proveedor),0) from proveedor where nit = "+ nit +";",cn);
+        cmd = new SqlCommand("Select ISNULL(MAX(id_proveedor),0) from proveedor where nit = " + nit + ";", cn);
         retorno = Convert.ToInt32(cmd.ExecuteScalar());
         if (retorno != 0)
         {
@@ -96,8 +97,8 @@ class conexion
                 salida = "No se pudo realizar el registro" + ex.ToString() + " Fin Error";
             }
             return salida;
-        }        
-        
+        }
+
     }
 
     public void cargarProveedor(DataGridView tabla)
@@ -128,5 +129,59 @@ class conexion
         {
             MessageBox.Show("No se pudo realizar la búsqueda, Error: " + ex.ToString() + " Fin Error");
         }
+    }
+
+    public void eliminarAfiliado(int id, DataGridView tabla) {
+        
+        try {
+
+            cmd = new SqlCommand("DELETE from afiliado WHERE id_afiliado = "+ id + ";", cn);
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Dato Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                adaptador = new SqlDataAdapter("EXEC sp_afiliado_leer;", cn);
+                ds = new DataSet();
+                adaptador.Fill(ds, "afiliado");
+                tabla.DataSource = ds.Tables["afiliado"];
+            }
+            else {
+                MessageBox.Show("El dato no existe en la tabla afiliado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+            }
+                                 
+        }
+        catch(Exception ex) {
+            MessageBox.Show("No se pudo eliminar el dato de la tabla afiliado, Error: " + ex.ToString() + " Fin Error");
+        }
+        
+        
+    }
+
+    public void eliminarProveedor(int id, DataGridView tabla)
+    {
+
+        try
+        {
+
+            cmd = new SqlCommand("EXEC sp_proveedor_borrar @id_proveedor = " + id + ";", cn);
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Dato Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                adaptador = new SqlDataAdapter("EXEC sp_proveedor_leer;", cn);
+                ds = new DataSet();
+                adaptador.Fill(ds, "proveedor");
+                tabla.DataSource = ds.Tables["proveedor"];
+            }
+            else
+            {
+                MessageBox.Show("El dato no existe en la tabla proveedores", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("No se pudo eliminar el dato de la tabla proveedor, Error: " + ex.ToString() + " Fin Error");
+        }
+
+
     }
 }
