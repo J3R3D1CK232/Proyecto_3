@@ -86,14 +86,18 @@ namespace Proyecto_3
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmModificarAfiliado modificarAfiliado = new frmModificarAfiliado();
-            modificarAfiliado.ShowDialog();
+            /*frmModificarAfiliado modificarAfiliado = new frmModificarAfiliado();
+            if (dgvListaAfiliado.SelectedRows.Count > 0)
+            {
+                modificarAfiliado.pNombre = dgvListaAfiliado.CurrentRow.Cells["Primer Nombre"].Value.ToString();
+                modificarAfiliado.ShowDialog();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+            }
+            */
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            
-        }
 
         private void frmListaAfiliado_Load(object sender, EventArgs e)
         {

@@ -14,6 +14,9 @@ namespace Proyecto_3
 {
     public partial class frmModificarAfiliado : Form
     {
+        public string pNombre, sNombre, pApellido, sApellido, fechaNacimiento, fechaCobretura;
+        public int telefono;
+        public double monto;
         public frmModificarAfiliado()
         {
             InitializeComponent();
@@ -85,6 +88,11 @@ namespace Proyecto_3
             frmListaProveedor frm = new frmListaProveedor();
             frm.Show();
             this.Hide();
+        }
+
+        private void frmModificarAfiliado_Load(object sender, EventArgs e)
+        {
+            txtpNombre.Text = pNombre;
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)

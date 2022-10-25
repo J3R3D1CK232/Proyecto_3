@@ -687,6 +687,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificarAfiliado";
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.frmModificarAfiliado_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.barraSuperior.ResumeLayout(false);
