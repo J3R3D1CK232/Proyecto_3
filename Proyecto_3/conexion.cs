@@ -176,4 +176,28 @@ class conexion
 
 
     }
+
+    public string modificarAfiliado(Int64 id_afiliado, string pNombre, string sNombre, string pApellido, string sApellido, string fecha_nacimiento, Int64 telefono, string fecha_cobertura, decimal monto, string estado) {
+        string salida;
+        try { 
+            cmd = new SqlCommand("sp_afiliado_actualizar",cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_afiliado", SqlDbType.BigInt).Value = id_afiliado;
+            cmd.Parameters.AddWithValue("@pNombre", SqlDbType.NVarChar).Value = pNombre;
+            cmd.Parameters.AddWithValue("@sNombre", SqlDbType.NVarChar).Value = sNombre;
+            cmd.Parameters.AddWithValue("@pApellido", SqlDbType.NVarChar).Value = pApellido;
+            cmd.Parameters.AddWithValue("@sApellido", SqlDbType.NVarChar).Value = sApellido;
+            cmd.Parameters.AddWithValue("@fecha_nacimiento", SqlDbType.NVarChar).Value = fecha_nacimiento;
+            cmd.Parameters.AddWithValue("@noTelefono", SqlDbType.BigInt).Value = telefono;
+            cmd.Parameters.AddWithValue("@fechaIniciocobertura", SqlDbType.NVarChar).Value = fecha_cobertura;
+            cmd.Parameters.AddWithValue("@montoCobertura", SqlDbType.Decimal).Value = monto;
+            cmd.Parameters.AddWithValue("@estado", SqlDbType.NVarChar).Value = estado;
+            cmd.ExecuteNonQuery();
+            salida = "Actualizacion Exitosa";
+        }
+        catch (Exception ex){
+            salida = "No se pudo realizar la modificacion del registro : " + ex.ToString() + " Fin Error";
+        }
+        return salida;
+    }
 }

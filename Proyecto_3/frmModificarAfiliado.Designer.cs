@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarAfiliado));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.lbid = new System.Windows.Forms.Label();
             this.cmbMesCobertura = new System.Windows.Forms.ComboBox();
             this.cmbAnoCobertura = new System.Windows.Forms.ComboBox();
@@ -56,8 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,29 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(603, 640);
             this.panelPrincipal.TabIndex = 0;
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(103, 540);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(119, 28);
+            this.cmbEstado.TabIndex = 50;
+            this.cmbEstado.Text = "Estado";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 543);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 20);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Estado";
             // 
             // lbid
             // 
@@ -474,7 +497,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(87)))));
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(148)))), ((int)(((byte)(66)))));
             this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -486,6 +509,7 @@
             this.btnRegistrar.TabIndex = 35;
             this.btnRegistrar.Text = "Aceptar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtMontoCobertura
             // 
@@ -496,6 +520,7 @@
             this.txtMontoCobertura.Name = "txtMontoCobertura";
             this.txtMontoCobertura.Size = new System.Drawing.Size(176, 26);
             this.txtMontoCobertura.TabIndex = 40;
+            this.txtMontoCobertura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoCobertura_KeyPress);
             // 
             // label7
             // 
@@ -528,6 +553,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(176, 26);
             this.txtTelefono.TabIndex = 37;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label5
             // 
@@ -569,6 +595,7 @@
             this.txtsApellido.Size = new System.Drawing.Size(176, 26);
             this.txtsApellido.TabIndex = 32;
             this.txtsApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsApellido_KeyPress);
             // 
             // txtpApellido
             // 
@@ -580,6 +607,7 @@
             this.txtpApellido.Size = new System.Drawing.Size(176, 26);
             this.txtpApellido.TabIndex = 31;
             this.txtpApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpApellido_KeyPress);
             // 
             // txtsNombre
             // 
@@ -591,6 +619,7 @@
             this.txtsNombre.Size = new System.Drawing.Size(176, 26);
             this.txtsNombre.TabIndex = 30;
             this.txtsNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsNombre_KeyPress);
             // 
             // txtpNombre
             // 
@@ -602,6 +631,7 @@
             this.txtpNombre.Size = new System.Drawing.Size(176, 26);
             this.txtpNombre.TabIndex = 29;
             this.txtpNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpNombre_KeyPress);
             // 
             // label2
             // 
@@ -617,7 +647,7 @@
             // 
             this.barraSuperior.AutoSize = true;
             this.barraSuperior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.barraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(65)))), ((int)(((byte)(95)))));
+            this.barraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.barraSuperior.Controls.Add(this.panel1);
             this.barraSuperior.Controls.Add(this.label1);
             this.barraSuperior.Controls.Add(this.btnMinimizar);
@@ -644,7 +674,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(49, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(357, 25);
@@ -684,29 +714,6 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 543);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 20);
-            this.label9.TabIndex = 49;
-            this.label9.Text = "Estado";
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(103, 540);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(119, 28);
-            this.cmbEstado.TabIndex = 50;
-            this.cmbEstado.Text = "Estado";
-            // 
             // frmModificarAfiliado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -720,6 +727,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificarAfiliado";
             this.Text = "Menu Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmModificarAfiliado_FormClosed);
             this.Load += new System.EventHandler(this.frmModificarAfiliado_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();

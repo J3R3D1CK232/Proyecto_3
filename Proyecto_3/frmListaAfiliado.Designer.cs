@@ -326,6 +326,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaAfiliado";
             this.Text = "Lista Afiliados";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListaAfiliado_FormClosing);
             this.Load += new System.EventHandler(this.frmListaAfiliado_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
@@ -348,13 +349,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvListaAfiliado;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ToolTip ttBusqueda;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.Button btnMinimizar;
         public System.Windows.Forms.Panel barraSuperior;
+        public System.Windows.Forms.DataGridView dgvListaAfiliado;
     }
 }
 

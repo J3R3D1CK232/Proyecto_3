@@ -10,16 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyecto_3
 {
     public partial class frmListaAfiliado : Form
     {
+        private frmModificarAfiliado frmEntra = new frmModificarAfiliado();
         public frmListaAfiliado()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             this.ttBusqueda.SetToolTip(this.txtBuscar, "Ingresar Código de Afiliado para realizar la busqueda");
-
+            this.frmEntra.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmModificarAfiliado_FormClosed);
         }
         int m, mx, my;
         private void barraSuperior_MouseDown(object sender, MouseEventArgs e)
@@ -160,6 +162,17 @@ namespace Proyecto_3
             }
         }
 
+        private void frmModificarAfiliado_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            conexion obj1 = new conexion();
+            obj1.cargarAfiliado(dgvListaAfiliado);
+        }
+
+        private void frmListaAfiliado_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
         private void barraSuperior_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
@@ -171,9 +184,6 @@ namespace Proyecto_3
             frmModificarAfiliado modificarAfiliado = new frmModificarAfiliado();
             if (dgvListaAfiliado.SelectedRows.Count > 0)
             {
-                barraSuperior.BackColor = Color.FromArgb(122,122,122);
-                btnCerrar.BackColor = Color.FromArgb(64,64,64);
-                btnMinimizar.BackColor = Color.FromArgb(64, 64, 64);
                 modificarAfiliado.idAfiliado = dgvListaAfiliado.CurrentRow.Cells[0].Value.ToString();
                 modificarAfiliado.txtpNombre.Text = dgvListaAfiliado.CurrentRow.Cells[1].Value.ToString();
                 modificarAfiliado.txtsNombre.Text = dgvListaAfiliado.CurrentRow.Cells[2].Value.ToString();
@@ -182,11 +192,16 @@ namespace Proyecto_3
                 modificarAfiliado.txtTelefono.Text = dgvListaAfiliado.CurrentRow.Cells[6].Value.ToString();
                 modificarAfiliado.txtMontoCobertura.Text = dgvListaAfiliado.CurrentRow.Cells[8].Value.ToString();
                 modificarAfiliado.estadoAfiliado = dgvListaAfiliado.CurrentRow.Cells[9].Value.ToString();
-                modificarAfiliado.ShowDialog();
+                modificarAfiliado.fechaNacimiento = dgvListaAfiliado.CurrentRow.Cells[5].Value.ToString();
+                modificarAfiliado.fechaCobertura = dgvListaAfiliado.CurrentRow.Cells[7].Value.ToString();
+                modificarAfiliado.Show();
+                this.Hide();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("seleccione una fila por favor");           
+
         }
+        
 
     }
 }
