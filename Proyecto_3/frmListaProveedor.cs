@@ -117,20 +117,29 @@ namespace Proyecto_3
         private void button1_Click_2(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
-            int numeroFila;
 
             if (dgvListaProveedor.SelectedRows.Count > 0)
             {
-                numeroFila = dgvListaProveedor.CurrentRow.Index;
-                int idSeleccion = Convert.ToInt32(dgvListaProveedor.SelectedRows[numeroFila].Cells[0].Value);
+
+                int numeroFila = dgvListaProveedor.CurrentRow.Index;
+                int numeroColumna = dgvListaProveedor.Columns["Codigo Proveedor"].Index;
                 DialogResult resultado = MessageBox.Show("Desea eliminar el dato seleccionado", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (resultado == DialogResult.Yes)
                 {
-                    obj1.eliminarProveedor(idSeleccion, dgvListaProveedor);
+                    if (dgvListaProveedor.SelectedRows.Count > 0)
+                    {
+                        var idSeleccion = dgvListaProveedor.CurrentRow.Cells["Codigo Proveedor"].Value.ToString();
+                        obj1.eliminarProveedor(idSeleccion);
+                        obj1.cargarProveedor(dgvListaProveedor);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una fila para realizar la accion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else if (resultado == DialogResult.No)
                 {
-                    obj1.cargarProveedor(dgvListaProveedor);
+                    obj1.cargarAfiliado(dgvListaProveedor);
                 }
             }
             else

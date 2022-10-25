@@ -131,18 +131,14 @@ class conexion
         }
     }
 
-    public void eliminarAfiliado(int id, DataGridView tabla) {
+    public void eliminarAfiliado(string id) {
         
         try {
 
             cmd = new SqlCommand("DELETE from afiliado WHERE id_afiliado = "+ id + ";", cn);
             if (cmd.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Dato Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                adaptador = new SqlDataAdapter("EXEC sp_afiliado_leer;", cn);
-                ds = new DataSet();
-                adaptador.Fill(ds, "afiliado");
-                tabla.DataSource = ds.Tables["afiliado"];
+                MessageBox.Show("Dato Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);                
             }
             else {
                 MessageBox.Show("El dato no existe en la tabla afiliado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning );
@@ -156,7 +152,7 @@ class conexion
         
     }
 
-    public void eliminarProveedor(int id, DataGridView tabla)
+    public void eliminarProveedor(string id)
     {
 
         try
@@ -165,11 +161,7 @@ class conexion
             cmd = new SqlCommand("EXEC sp_proveedor_borrar @id_proveedor = " + id + ";", cn);
             if (cmd.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Dato Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                adaptador = new SqlDataAdapter("EXEC sp_proveedor_leer;", cn);
-                ds = new DataSet();
-                adaptador.Fill(ds, "proveedor");
-                tabla.DataSource = ds.Tables["proveedor"];
+                MessageBox.Show("Dato Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);                
             }
             else
             {

@@ -133,16 +133,25 @@ namespace Proyecto_3
         private void button1_Click_1(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
-            int numeroFila;
 
             if (dgvListaAfiliado.SelectedRows.Count > 0)
             {
-                numeroFila = dgvListaAfiliado.CurrentRow.Index;
-                int idSeleccion = Convert.ToInt32(dgvListaAfiliado.SelectedRows[numeroFila].Cells[0].Value);                
+                
+                int numeroFila = dgvListaAfiliado.CurrentRow.Index;
+                int numeroColumna = dgvListaAfiliado.Columns["Codigo Afiliado"].Index;
                 DialogResult resultado = MessageBox.Show("Desea eliminar el dato seleccionado", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (resultado == DialogResult.Yes)
                 {
-                    obj1.eliminarAfiliado(idSeleccion, dgvListaAfiliado);
+                    if (dgvListaAfiliado.SelectedRows.Count > 0)
+                    {
+                        var idSeleccion = dgvListaAfiliado.CurrentRow.Cells["Codigo Afiliado"].Value.ToString();
+                        obj1.eliminarAfiliado(idSeleccion);
+                        obj1.cargarAfiliado(dgvListaAfiliado);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una fila para realizar la accion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else if (resultado == DialogResult.No)
                 {
