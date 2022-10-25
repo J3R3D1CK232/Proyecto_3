@@ -14,9 +14,7 @@ namespace Proyecto_3
 {
     public partial class frmModificarAfiliado : Form
     {
-        public string pNombre, sNombre, pApellido, sApellido, fechaNacimiento, fechaCobretura;
-        public int telefono;
-        public double monto;
+        public string idAfiliado,estadoAfiliado;
         public frmModificarAfiliado()
         {
             InitializeComponent();
@@ -33,9 +31,11 @@ namespace Proyecto_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmListaAfiliado listaAfiliado = new frmListaAfiliado();
+            frmListaAfiliado listaAfiliado = new frmListaAfiliado();            
             this.Close();
-
+            listaAfiliado.barraSuperior.BackColor = Color.FromArgb(36, 65, 95);
+            listaAfiliado.btnCerrar.BackColor = Color.FromArgb(224, 68, 88);
+            listaAfiliado.btnMinimizar.BackColor = Color.FromArgb(231, 248, 250);
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -92,7 +92,16 @@ namespace Proyecto_3
 
         private void frmModificarAfiliado_Load(object sender, EventArgs e)
         {
-            txtpNombre.Text = pNombre;
+            lbid.Hide();
+            lbid.Text = idAfiliado;
+            if (estadoAfiliado == "Activo")
+            {
+                cmbEstado.SelectedItem = "Activo";
+            }
+            else if (estadoAfiliado == "Inactivo") {
+
+                cmbEstado.SelectedItem = "Inactivo";
+            }
         }
 
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)

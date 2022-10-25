@@ -84,21 +84,6 @@ namespace Proyecto_3
             this.Close();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            /*frmModificarAfiliado modificarAfiliado = new frmModificarAfiliado();
-            if (dgvListaAfiliado.SelectedRows.Count > 0)
-            {
-                modificarAfiliado.pNombre = dgvListaAfiliado.CurrentRow.Cells["Primer Nombre"].Value.ToString();
-                modificarAfiliado.ShowDialog();
-            }
-            else
-                MessageBox.Show("seleccione una fila por favor");
-            }
-            */
-        }
-
-
         private void frmListaAfiliado_Load(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
@@ -179,5 +164,30 @@ namespace Proyecto_3
         {
             m = 0;
         }
+
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmModificarAfiliado modificarAfiliado = new frmModificarAfiliado();
+            if (dgvListaAfiliado.SelectedRows.Count > 0)
+            {
+                barraSuperior.BackColor = Color.FromArgb(122,122,122);
+                btnCerrar.BackColor = Color.FromArgb(64,64,64);
+                btnMinimizar.BackColor = Color.FromArgb(64, 64, 64);
+                modificarAfiliado.idAfiliado = dgvListaAfiliado.CurrentRow.Cells[0].Value.ToString();
+                modificarAfiliado.txtpNombre.Text = dgvListaAfiliado.CurrentRow.Cells[1].Value.ToString();
+                modificarAfiliado.txtsNombre.Text = dgvListaAfiliado.CurrentRow.Cells[2].Value.ToString();
+                modificarAfiliado.txtpApellido.Text = dgvListaAfiliado.CurrentRow.Cells[3].Value.ToString();
+                modificarAfiliado.txtsApellido.Text = dgvListaAfiliado.CurrentRow.Cells[4].Value.ToString();
+                modificarAfiliado.txtTelefono.Text = dgvListaAfiliado.CurrentRow.Cells[6].Value.ToString();
+                modificarAfiliado.txtMontoCobertura.Text = dgvListaAfiliado.CurrentRow.Cells[8].Value.ToString();
+                modificarAfiliado.estadoAfiliado = dgvListaAfiliado.CurrentRow.Cells[9].Value.ToString();
+                modificarAfiliado.ShowDialog();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+        }
+
     }
 }
+

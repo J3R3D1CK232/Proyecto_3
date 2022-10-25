@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarAfiliado));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.lbid = new System.Windows.Forms.Label();
             this.cmbMesCobertura = new System.Windows.Forms.ComboBox();
             this.cmbAnoCobertura = new System.Windows.Forms.ComboBox();
             this.cmbDiaCobertura = new System.Windows.Forms.ComboBox();
@@ -55,6 +56,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +66,9 @@
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
             this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelPrincipal.Controls.Add(this.cmbEstado);
+            this.panelPrincipal.Controls.Add(this.label9);
+            this.panelPrincipal.Controls.Add(this.lbid);
             this.panelPrincipal.Controls.Add(this.cmbMesCobertura);
             this.panelPrincipal.Controls.Add(this.cmbAnoCobertura);
             this.panelPrincipal.Controls.Add(this.cmbDiaCobertura);
@@ -89,6 +95,14 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(603, 640);
             this.panelPrincipal.TabIndex = 0;
+            // 
+            // lbid
+            // 
+            this.lbid.AutoSize = true;
+            this.lbid.Location = new System.Drawing.Point(13, 46);
+            this.lbid.Name = "lbid";
+            this.lbid.Size = new System.Drawing.Size(0, 13);
+            this.lbid.TabIndex = 48;
             // 
             // cmbMesCobertura
             // 
@@ -466,7 +480,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(13)))));
-            this.btnRegistrar.Location = new System.Drawing.Point(251, 569);
+            this.btnRegistrar.Location = new System.Drawing.Point(467, 583);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(101, 36);
             this.btnRegistrar.TabIndex = 35;
@@ -554,7 +568,6 @@
             this.txtsApellido.Name = "txtsApellido";
             this.txtsApellido.Size = new System.Drawing.Size(176, 26);
             this.txtsApellido.TabIndex = 32;
-            this.txtsApellido.Text = "Segundo Apellido";
             this.txtsApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtpApellido
@@ -566,7 +579,6 @@
             this.txtpApellido.Name = "txtpApellido";
             this.txtpApellido.Size = new System.Drawing.Size(176, 26);
             this.txtpApellido.TabIndex = 31;
-            this.txtpApellido.Text = "Primer Apellido";
             this.txtpApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtsNombre
@@ -578,7 +590,6 @@
             this.txtsNombre.Name = "txtsNombre";
             this.txtsNombre.Size = new System.Drawing.Size(176, 26);
             this.txtsNombre.TabIndex = 30;
-            this.txtsNombre.Text = "Segundo Nombre";
             this.txtsNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtpNombre
@@ -590,7 +601,6 @@
             this.txtpNombre.Name = "txtpNombre";
             this.txtpNombre.Size = new System.Drawing.Size(176, 26);
             this.txtpNombre.TabIndex = 29;
-            this.txtpNombre.Text = "Primer Nombre";
             this.txtpNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -607,7 +617,7 @@
             // 
             this.barraSuperior.AutoSize = true;
             this.barraSuperior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.barraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.barraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(65)))), ((int)(((byte)(95)))));
             this.barraSuperior.Controls.Add(this.panel1);
             this.barraSuperior.Controls.Add(this.label1);
             this.barraSuperior.Controls.Add(this.btnMinimizar);
@@ -674,6 +684,29 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(22, 543);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 20);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Estado";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(103, 540);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(119, 28);
+            this.cmbEstado.TabIndex = 50;
+            this.cmbEstado.Text = "Estado";
+            // 
             // frmModificarAfiliado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,26 +737,29 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbMesCobertura;
-        private System.Windows.Forms.ComboBox cmbAnoCobertura;
-        private System.Windows.Forms.ComboBox cmbDiaCobertura;
-        private System.Windows.Forms.ComboBox cmbMesNacimiento;
-        private System.Windows.Forms.ComboBox cmbAnoNacimiento;
-        private System.Windows.Forms.ComboBox cmbDiaNacimiento;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txtMontoCobertura;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtsApellido;
-        private System.Windows.Forms.TextBox txtpApellido;
-        private System.Windows.Forms.TextBox txtsNombre;
-        private System.Windows.Forms.TextBox txtpNombre;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtsNombre;
+        public System.Windows.Forms.TextBox txtpNombre;
+        public System.Windows.Forms.ComboBox cmbMesCobertura;
+        public System.Windows.Forms.ComboBox cmbAnoCobertura;
+        public System.Windows.Forms.ComboBox cmbDiaCobertura;
+        public System.Windows.Forms.ComboBox cmbMesNacimiento;
+        public System.Windows.Forms.ComboBox cmbAnoNacimiento;
+        public System.Windows.Forms.ComboBox cmbDiaNacimiento;
+        public System.Windows.Forms.TextBox txtMontoCobertura;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtsApellido;
+        public System.Windows.Forms.TextBox txtpApellido;
+        private System.Windows.Forms.Label lbid;
+        public System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Label label9;
     }
 }
 

@@ -312,7 +312,6 @@
             this.ttBusqueda.IsBalloon = true;
             this.ttBusqueda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.ttBusqueda.ToolTipTitle = "Información";
-            this.ttBusqueda.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // frmListaAfiliado
             // 
@@ -340,8 +339,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnInsertarAfiliado;
         private System.Windows.Forms.Button listaProveedor;
         private System.Windows.Forms.Button btnInsertarProveedor;
@@ -354,8 +351,10 @@
         private System.Windows.Forms.DataGridView dgvListaAfiliado;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ToolTip ttBusqueda;
-        private System.Windows.Forms.Panel barraSuperior;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnCerrar;
+        public System.Windows.Forms.Button btnMinimizar;
+        public System.Windows.Forms.Panel barraSuperior;
     }
 }
 
