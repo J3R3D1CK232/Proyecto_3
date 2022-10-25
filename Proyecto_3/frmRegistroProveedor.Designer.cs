@@ -44,6 +44,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
+            this.btnTransferencia = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +131,7 @@
             this.barraSuperior.AutoSize = true;
             this.barraSuperior.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.barraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(65)))), ((int)(((byte)(95)))));
+            this.barraSuperior.Controls.Add(this.btnTransferencia);
             this.barraSuperior.Controls.Add(this.panel1);
             this.barraSuperior.Controls.Add(this.label1);
             this.barraSuperior.Controls.Add(this.listaProveedor);
@@ -275,6 +277,25 @@
             this.btnInsertarAfiliado.UseVisualStyleBackColor = false;
             this.btnInsertarAfiliado.Click += new System.EventHandler(this.btnInsertarAfiliado_Click);
             // 
+            // btnTransferencia
+            // 
+            this.btnTransferencia.BackColor = System.Drawing.Color.White;
+            this.btnTransferencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnTransferencia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.btnTransferencia.FlatAppearance.BorderSize = 0;
+            this.btnTransferencia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnTransferencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransferencia.ForeColor = System.Drawing.Color.Black;
+            this.btnTransferencia.Image = ((System.Drawing.Image)(resources.GetObject("btnTransferencia.Image")));
+            this.btnTransferencia.Location = new System.Drawing.Point(164, 5);
+            this.btnTransferencia.Name = "btnTransferencia";
+            this.btnTransferencia.Size = new System.Drawing.Size(32, 32);
+            this.btnTransferencia.TabIndex = 23;
+            this.btnTransferencia.UseVisualStyleBackColor = false;
+            this.btnTransferencia.Click += new System.EventHandler(this.btnTransferencia_Click);
+            // 
             // frmRegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +335,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnTransferencia;
     }
 }
 

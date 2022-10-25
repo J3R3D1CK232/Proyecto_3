@@ -116,6 +116,13 @@ namespace Proyecto_3
             }
         }
 
+        private void btnTransferencia_Click(object sender, EventArgs e)
+        {
+            frmListaTransferencia frm = new frmListaTransferencia();
+            frm.Show();
+            this.Close();
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 

@@ -221,4 +221,34 @@ class conexion
         }
         return salida;
     }
+
+    public void buscarTransaccion(DataGridView tabla, Int64 id)
+    {
+        try
+        {
+            adaptador = new SqlDataAdapter("EXEC sp_transaccion_buscar @IDTRANSACCION = " + id + ";", cn);
+            ds = new DataSet();
+            adaptador.Fill(ds, "transaccion");
+            tabla.DataSource = ds.Tables["trasaccion"];
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("No se pudo realizar la búsqueda, Error: " + ex.ToString() + " Fin Error");
+        }
+    }
+
+    public void cargarTransaccion(DataGridView tabla)
+    {
+        try
+        {
+            adaptador = new SqlDataAdapter("EXEC sp_transaccion_leer;", cn);
+            ds = new DataSet();
+            adaptador.Fill(ds, "transaccion");
+            tabla.DataSource = ds.Tables["transaccion"];
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("No se pudo consultar la información, Error: " + ex.ToString() + " Fin Error");
+        }
+    }
 }
