@@ -88,7 +88,11 @@ namespace Proyecto_3
         {
             conexion obj1 = new conexion();
             frmListaAfiliado obj2 = new frmListaAfiliado();
-
+            if (txtpNombre.Text == "" || txtsNombre.Text == "" || txtpApellido.Text == "" || txtsApellido.Text == "" || txtTelefono.Text == "" || txtMontoCobertura.Text == "")
+            {
+                MessageBox.Show("Debe completar la información", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if ((cmbDiaNacimiento.SelectedIndex == -1) || (cmbMesNacimiento.SelectedIndex == -1) || (cmbAnoNacimiento.SelectedIndex == -1))
             {
                 MessageBox.Show("Debe completar la fecha de nacimiento", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -105,6 +109,7 @@ namespace Proyecto_3
                 MessageBox.Show("Debe seleccionar un estado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            
 
             string mesNacimiento = cmbMesNacimiento.SelectedItem.ToString();
             string mesNacimientoNumero = "";

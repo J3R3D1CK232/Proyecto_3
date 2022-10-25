@@ -14,11 +14,13 @@ namespace Proyecto_3
 {
     public partial class frmListaProveedor : Form
     {
+        private frmModificarProveedor frmEntra = new frmModificarProveedor();
         public frmListaProveedor()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             this.ttBusqueda.SetToolTip(this.txtBuscar, "Ingresar Código de Afiliado para realizar la busqueda");
+            this.frmEntra.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmModificarProveedor_FormClosed);
         }
         int m, mx, my;
         private void barraSuperior_MouseDown(object sender, MouseEventArgs e)
@@ -148,6 +150,22 @@ namespace Proyecto_3
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmModificarProveedor modificarProveedor = new frmModificarProveedor();
+            if (dgvListaProveedor.SelectedRows.Count > 0)
+            {
+                modificarProveedor.idAfiliado = dgvListaProveedor.CurrentRow.Cells[0].Value.ToString();
+                modificarProveedor.txtNit.Text = dgvListaProveedor.CurrentRow.Cells[1].Value.ToString();
+                modificarProveedor.txtRazonSocial.Text = dgvListaProveedor.CurrentRow.Cells[2].Value.ToString();
+                modificarProveedor.estadoAfiliado = dgvListaProveedor.CurrentRow.Cells[3].Value.ToString();
+                modificarProveedor.Show();
+                this.Hide();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+        }
+
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1) { 
@@ -158,6 +176,12 @@ namespace Proyecto_3
         private void barraSuperior_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
+        }
+
+        private void frmModificarProveedor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            conexion obj1 = new conexion();
+            obj1.cargarProveedor(dgvListaProveedor);
         }
     }
 }

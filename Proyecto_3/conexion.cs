@@ -200,4 +200,25 @@ class conexion
         }
         return salida;
     }
+
+    public string modificarProveedor(Int64 id_proveedor, Int64 nit, string razonSocial,  string estado)
+    {
+        string salida;
+        try
+        {
+            cmd = new SqlCommand("sp_proveedor_actualizar", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_proveedor", SqlDbType.BigInt).Value = id_proveedor;
+            cmd.Parameters.AddWithValue("@nit", SqlDbType.BigInt).Value = nit;
+            cmd.Parameters.AddWithValue("@razonSocial ", SqlDbType.NVarChar).Value = razonSocial;
+            cmd.Parameters.AddWithValue("@estado", SqlDbType.NVarChar).Value = estado;
+            cmd.ExecuteNonQuery();
+            salida = "Actualizacion Exitosa";
+        }
+        catch (Exception ex)
+        {
+            salida = "No se pudo realizar la modificacion del registro : " + ex.ToString() + " Fin Error";
+        }
+        return salida;
+    }
 }

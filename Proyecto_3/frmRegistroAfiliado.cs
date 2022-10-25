@@ -177,6 +177,11 @@ namespace Proyecto_3
                 MessageBox.Show("Debe completar la fecha de cobertura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (txtpNombre.Text == "" || txtsNombre.Text == "" || txtpApellido.Text == "" || txtsApellido.Text == "" || txtTelefono.Text == "" || txtMontoCobertura.Text == "")
+            {
+                MessageBox.Show("Debe completar la información", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             //convertir los meses de letras a numeros 
             string mesNacimiento = cmbMesNacimiento.SelectedItem.ToString();
