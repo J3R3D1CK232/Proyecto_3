@@ -19,7 +19,7 @@ namespace Proyecto_3
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            this.ttBusqueda.SetToolTip(this.txtBuscar, "Ingresar Código de Afiliado para realizar la busqueda");
+            this.ttBusqueda.SetToolTip(this.txtBuscar, "Ingresar Código de Proveedor para realizar la busqueda");
             this.frmEntra.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmModificarProveedor_FormClosed);
         }
         int m, mx, my;

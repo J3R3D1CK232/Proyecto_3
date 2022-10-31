@@ -73,11 +73,15 @@ class conexion
     public string insertarProveedor(Int64 nit, string razonSocial, string Estado) {
         string salida = string.Empty;
         int retorno = 0;
+        int retornoT = 0;
+        SqlCommand cmdt;
         cmd = new SqlCommand("Select ISNULL(MAX(id_proveedor),0) from proveedor where nit = " + nit + ";", cn);
+        cmdt = new SqlCommand("Select ISNULL(MAX(id_proveedor),0) from proveedor where razonSocial ="+ razonSocial + ";",cn);
+        retornoT = Convert.ToInt32(cmdt.ExecuteScalar());
         retorno = Convert.ToInt32(cmd.ExecuteScalar());
-        if (retorno != 0)
+        if (retorno != 0 && retornoT != 0)
         {
-            MessageBox.Show("Ya existe un proveedor registrado con ese NIT", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Ya existe un proveedor registrado con esta información", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             salida = "No se pudo realizar el registro";
             return salida;
         }
