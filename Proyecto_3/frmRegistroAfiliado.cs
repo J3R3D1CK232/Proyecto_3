@@ -162,6 +162,21 @@ namespace Proyecto_3
             }
         }
 
+        public void limpiarControles() {
+            txtpNombre.Clear();
+            txtsNombre.Clear();
+            txtpApellido.Clear();
+            txtsApellido.Clear();
+            txtTelefono.Clear();
+            txtMontoCobertura.Clear();
+            cmbDiaNacimiento.SelectedIndex = -1;
+            cmbMesNacimiento.SelectedIndex = -1;
+            cmbAnoNacimiento.SelectedIndex = -1;
+            cmbDiaCobertura.SelectedIndex = -1;
+            cmbMesCobertura.SelectedIndex = -1;
+            cmbAnoCobertura.SelectedIndex = -1;
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             conexion obj2 = new conexion();
@@ -295,7 +310,7 @@ namespace Proyecto_3
             /*String fecha_Nacimiento = DateTime.Parse(fechaNacimiento).ToShortDateString();
             String fecha_Cobertura = DateTime.Parse(fechaCobertura).ToShortDateString();*/
             MessageBox.Show(obj2.insertarAfiliado(txtpNombre.Text,txtsNombre.Text,txtpApellido.Text,txtsApellido.Text,fechaNacimiento,Convert.ToInt32(txtTelefono.Text),fechaCobertura,Convert.ToDecimal(txtMontoCobertura.Text),"Activo"));
-
+            limpiarControles();
         }
 
         private void frmRegistroAfiliado_Load(object sender, EventArgs e)

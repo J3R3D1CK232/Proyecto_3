@@ -96,6 +96,11 @@ namespace Proyecto_3
             conexion obj1 = new conexion();
         }
 
+        public void limpiarControles() {
+            txtNitProveedor.Clear();
+            txtRazonSocial.Clear();
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (txtNitProveedor.Text == "" || txtRazonSocial.Text == "")
@@ -105,6 +110,7 @@ namespace Proyecto_3
             }
             conexion obj2 = new conexion();
             MessageBox.Show(obj2.insertarProveedor(Convert.ToInt64(txtNitProveedor.Text),txtRazonSocial.Text,"Activo")); ;
+            limpiarControles();
         }
 
         private void txtNitProveedor_KeyPress(object sender, KeyPressEventArgs e)

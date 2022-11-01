@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_3;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -28,11 +29,12 @@ class conexion
 
     public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, string fechaNacimiento, Int64 telefono, string fechaCobertura, decimal monto, string estado)
     {
+        frmRegistroAfiliado frm = new frmRegistroAfiliado();
         string salida = "Registro Exitoso";
         try
         {
             cmd = new SqlCommand("Insert into afiliado(pNombre,sNombre,pApellido,sApellido,fecha_nacimiento,noTelefono,fechaIniciocobertura,montoCobertura,estado) values ('" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + fechaNacimiento + "'," + telefono + ",'" + fechaCobertura + "','" + monto + "','" + estado + "')", cn);
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();           
         }
         catch (Exception ex)
         {
@@ -70,16 +72,14 @@ class conexion
         }
     }
 
-    public string insertarProveedor(Int64 nit, string razonSocial, string Estado) {
+    public string insertarProveedor(Int64 nit, string razonSocial, string Estado) {        
         string salida = string.Empty;
         int retorno = 0;
-        int retornoT = 0;
         SqlCommand cmdt;
         cmd = new SqlCommand("Select ISNULL(MAX(id_proveedor),0) from proveedor where nit = " + nit + ";", cn);
-        cmdt = new SqlCommand("Select ISNULL(MAX(id_proveedor),0) from proveedor where razonSocial ="+ razonSocial + ";",cn);
-        retornoT = Convert.ToInt32(cmdt.ExecuteScalar());
+        
         retorno = Convert.ToInt32(cmd.ExecuteScalar());
-        if (retorno != 0 && retornoT != 0)
+        if (retorno != 0)
         {
             MessageBox.Show("Ya existe un proveedor registrado con esta información", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             salida = "No se pudo realizar el registro";
@@ -95,6 +95,8 @@ class conexion
                 cmd.Parameters.AddWithValue("@estado", SqlDbType.NVarChar).Value = Estado;
                 cmd.ExecuteNonQuery();
                 salida = "Registro Exitoso";
+                
+                
             }
             catch (Exception ex)
             {
