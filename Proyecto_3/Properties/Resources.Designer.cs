@@ -59,5 +59,35 @@ namespace Proyecto_3.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mi_buen_seguro_s_a_1_ {
+            get {
+                object obj = ResourceManager.GetObject("Mi buen seguro,s.a(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mi_buen_seguro_s_a_2_ {
+            get {
+                object obj = ResourceManager.GetObject("Mi buen seguro,s.a(2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mi_buen_seguro_s_a_6_ {
+            get {
+                object obj = ResourceManager.GetObject("Mi buen seguro,s.a(6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
