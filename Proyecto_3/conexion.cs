@@ -228,14 +228,18 @@ class conexion
         return salida;
     }
 
-    public void buscarTransaccion(DataGridView tabla, Int64 id)
+    public void buscarTransaccion(DataGridView tabla, Int32 id)
     {
         try
         {
-            adaptador = new SqlDataAdapter("EXEC sp_transaccion_buscar @IDTRANSACCION = " + id + ";", cn);
-            ds = new DataSet();
-            adaptador.Fill(ds, "transaccion");
-            tabla.DataSource = ds.Tables["trasaccion"];
+            cmd = new SqlCommand("sp_transaccion_buscar", cn);
+            cmd.Parameters.AddWithValue("@IDTRANSACCION", SqlDbType.Int).Value = id;
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            tabla.DataSource = dt.DefaultView;
+            
         }
         catch (Exception ex)
         {

@@ -86,7 +86,7 @@ namespace Proyecto_3
         private void frmListaAfiliado_Load(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
-            obj1.cargarTransaccion(dgvListaAfiliado);
+            obj1.cargarTransaccion(dgvListaTransaccion);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -97,16 +97,16 @@ namespace Proyecto_3
             }
             else
             {
-                Int64 buscarId = Convert.ToInt64(txtBuscar.Text);
+                Int32 buscarId = Convert.ToInt32(txtBuscar.Text);
                 conexion obj1 = new conexion();
-                obj1.buscarTransaccion(dgvListaAfiliado, buscarId);
+                obj1.buscarTransaccion(dgvListaTransaccion, buscarId);
             }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             conexion obj1 = new conexion();
-            obj1.cargarTransaccion(dgvListaAfiliado);
+            obj1.cargarTransaccion(dgvListaTransaccion);
         }
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)

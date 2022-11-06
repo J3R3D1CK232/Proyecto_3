@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaTransferencia));
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.dgvListaAfiliado = new System.Windows.Forms.DataGridView();
+            this.dgvListaTransaccion = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
             this.ttBusqueda = new System.Windows.Forms.ToolTip(this.components);
             this.panelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaAfiliado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaTransaccion)).BeginInit();
             this.barraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
             this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelPrincipal.Controls.Add(this.dgvListaAfiliado);
+            this.panelPrincipal.Controls.Add(this.dgvListaTransaccion);
             this.panelPrincipal.Controls.Add(this.btnBuscar);
             this.panelPrincipal.Controls.Add(this.txtBuscar);
             this.panelPrincipal.Controls.Add(this.label2);
@@ -66,24 +66,24 @@
             this.panelPrincipal.Size = new System.Drawing.Size(1024, 640);
             this.panelPrincipal.TabIndex = 0;
             // 
-            // dgvListaAfiliado
+            // dgvListaTransaccion
             // 
-            this.dgvListaAfiliado.AllowUserToAddRows = false;
-            this.dgvListaAfiliado.AllowUserToDeleteRows = false;
-            this.dgvListaAfiliado.AllowUserToResizeColumns = false;
-            this.dgvListaAfiliado.AllowUserToResizeRows = false;
-            this.dgvListaAfiliado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListaAfiliado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvListaAfiliado.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListaAfiliado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgvListaAfiliado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaAfiliado.Location = new System.Drawing.Point(12, 163);
-            this.dgvListaAfiliado.MultiSelect = false;
-            this.dgvListaAfiliado.Name = "dgvListaAfiliado";
-            this.dgvListaAfiliado.ReadOnly = true;
-            this.dgvListaAfiliado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaAfiliado.Size = new System.Drawing.Size(1000, 465);
-            this.dgvListaAfiliado.TabIndex = 6;
+            this.dgvListaTransaccion.AllowUserToAddRows = false;
+            this.dgvListaTransaccion.AllowUserToDeleteRows = false;
+            this.dgvListaTransaccion.AllowUserToResizeColumns = false;
+            this.dgvListaTransaccion.AllowUserToResizeRows = false;
+            this.dgvListaTransaccion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaTransaccion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvListaTransaccion.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListaTransaccion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvListaTransaccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaTransaccion.Location = new System.Drawing.Point(12, 163);
+            this.dgvListaTransaccion.MultiSelect = false;
+            this.dgvListaTransaccion.Name = "dgvListaTransaccion";
+            this.dgvListaTransaccion.ReadOnly = true;
+            this.dgvListaTransaccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaTransaccion.Size = new System.Drawing.Size(1000, 465);
+            this.dgvListaTransaccion.TabIndex = 6;
             // 
             // btnBuscar
             // 
@@ -314,7 +314,7 @@
             this.Load += new System.EventHandler(this.frmListaAfiliado_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaAfiliado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaTransaccion)).EndInit();
             this.barraSuperior.ResumeLayout(false);
             this.barraSuperior.PerformLayout();
             this.ResumeLayout(false);
@@ -337,8 +337,8 @@
         public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.Button btnMinimizar;
         public System.Windows.Forms.Panel barraSuperior;
-        public System.Windows.Forms.DataGridView dgvListaAfiliado;
         private System.Windows.Forms.Button btnTransferencia;
+        private System.Windows.Forms.DataGridView dgvListaTransaccion;
     }
 }
 
