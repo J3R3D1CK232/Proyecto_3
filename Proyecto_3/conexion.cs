@@ -2,8 +2,10 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 class conexion
 {
@@ -27,19 +29,31 @@ class conexion
         }
     }
 
+
     public string insertarAfiliado(string pNombre, string sNombre, string pApellido, string sApellido, string fechaNacimiento, Int64 telefono, string fechaCobertura, decimal monto, string estado)
     {
         frmRegistroAfiliado frm = new frmRegistroAfiliado();
         string salida = "Registro Exitoso";
-        try
+        int retorno;        
+        cmd = new SqlCommand("Select ISNULL(MAX(id_afiliado),0) from afiliado where pNombre = '"+pNombre+"' AND sNombre = '"+sNombre+"' AND pApellido = '"+pApellido+"' AND sApellido = '"+sApellido+"';", cn);
+        retorno = Convert.ToInt32(cmd.ExecuteScalar());
+        if (retorno != 0)
         {
-            cmd = new SqlCommand("Insert into afiliado(pNombre,sNombre,pApellido,sApellido,fecha_nacimiento,noTelefono,fechaIniciocobertura,montoCobertura,estado) values ('" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + fechaNacimiento + "'," + telefono + ",'" + fechaCobertura + "','" + monto + "','" + estado + "')", cn);
-            cmd.ExecuteNonQuery();           
+            MessageBox.Show("Ya existe un afiliado registrado con esta información, el codigo de afiliado es: "+retorno, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            salida = "No se pudo realizar el registro";
+            return salida;
         }
-        catch (Exception ex)
-        {
-            salida = "No se pudo guardar la información, Error: " + ex.ToString() + " Fin Error";
-        }
+        else {
+            try
+            {
+                cmd = new SqlCommand("Insert into afiliado(pNombre,sNombre,pApellido,sApellido,fecha_nacimiento,noTelefono,fechaIniciocobertura,montoCobertura,estado) values ('" + pNombre + "','" + sNombre + "','" + pApellido + "','" + sApellido + "','" + fechaNacimiento + "'," + telefono + ",'" + fechaCobertura + "','" + monto + "','" + estado + "')", cn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                salida = "No se pudo guardar la información, Error: " + ex.ToString() + " Fin Error";
+            }
+        }        
         return salida;
     }
     public void cargarAfiliado(DataGridView tabla)

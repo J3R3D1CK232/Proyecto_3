@@ -192,9 +192,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(49, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 25);
+            this.label1.Size = new System.Drawing.Size(386, 25);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Modificar Información de Afiliado";
+            this.label1.Text = "Modificar Información de Proveedor";
             // 
             // btnMinimizar
             // 
