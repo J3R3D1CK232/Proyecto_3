@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mi Buen Seguro.exe" size="788912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mi Buen Seguro.exe" size="787888">
       <assemblyIdentity name="Mi Buen Seguro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eR+/3WgDoYE3mzu5EnahHH4r7paXQUCPJ5MsTMs1teo=</dsig:DigestValue>
+        <dsig:DigestValue>5yavIAFp86eXit1iNBiajiDCSSiFFvwBm8OjJmlbL1c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

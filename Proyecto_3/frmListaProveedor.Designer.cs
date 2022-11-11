@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaProveedor));
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dgvListaProveedor = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.barraSuperior = new System.Windows.Forms.Panel();
+            this.btnTransferencia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.listaProveedor = new System.Windows.Forms.Button();
@@ -47,7 +47,6 @@
             this.btnListaAfiliado = new System.Windows.Forms.Button();
             this.btnInsertarAfiliado = new System.Windows.Forms.Button();
             this.ttBusqueda = new System.Windows.Forms.ToolTip(this.components);
-            this.btnTransferencia = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProveedor)).BeginInit();
             this.barraSuperior.SuspendLayout();
@@ -57,7 +56,6 @@
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
             this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelPrincipal.Controls.Add(this.button1);
             this.panelPrincipal.Controls.Add(this.btnModificar);
             this.panelPrincipal.Controls.Add(this.dgvListaProveedor);
             this.panelPrincipal.Controls.Add(this.btnBuscar);
@@ -69,22 +67,6 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1024, 640);
             this.panelPrincipal.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
-            this.button1.Location = new System.Drawing.Point(812, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // btnModificar
             // 
@@ -180,6 +162,25 @@
             this.barraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseDown);
             this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             this.barraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseUp);
+            // 
+            // btnTransferencia
+            // 
+            this.btnTransferencia.BackColor = System.Drawing.Color.White;
+            this.btnTransferencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnTransferencia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
+            this.btnTransferencia.FlatAppearance.BorderSize = 0;
+            this.btnTransferencia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnTransferencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransferencia.ForeColor = System.Drawing.Color.Black;
+            this.btnTransferencia.Image = ((System.Drawing.Image)(resources.GetObject("btnTransferencia.Image")));
+            this.btnTransferencia.Location = new System.Drawing.Point(164, 5);
+            this.btnTransferencia.Name = "btnTransferencia";
+            this.btnTransferencia.Size = new System.Drawing.Size(32, 32);
+            this.btnTransferencia.TabIndex = 24;
+            this.btnTransferencia.UseVisualStyleBackColor = false;
+            this.btnTransferencia.Click += new System.EventHandler(this.btnTransferencia_Click);
             // 
             // panel1
             // 
@@ -316,25 +317,6 @@
             this.ttBusqueda.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.ttBusqueda.ToolTipTitle = "Información";
             // 
-            // btnTransferencia
-            // 
-            this.btnTransferencia.BackColor = System.Drawing.Color.White;
-            this.btnTransferencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTransferencia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(68)))), ((int)(((byte)(88)))));
-            this.btnTransferencia.FlatAppearance.BorderSize = 0;
-            this.btnTransferencia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnTransferencia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransferencia.ForeColor = System.Drawing.Color.Black;
-            this.btnTransferencia.Image = ((System.Drawing.Image)(resources.GetObject("btnTransferencia.Image")));
-            this.btnTransferencia.Location = new System.Drawing.Point(164, 5);
-            this.btnTransferencia.Name = "btnTransferencia";
-            this.btnTransferencia.Size = new System.Drawing.Size(32, 32);
-            this.btnTransferencia.TabIndex = 24;
-            this.btnTransferencia.UseVisualStyleBackColor = false;
-            this.btnTransferencia.Click += new System.EventHandler(this.btnTransferencia_Click);
-            // 
             // frmListaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,7 +356,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip ttBusqueda;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTransferencia;
